@@ -1,4 +1,9 @@
 
-public class cabin {
+public class cabin 
+{
+	public void cabin()
+	{
+		
+	}
 
 }
