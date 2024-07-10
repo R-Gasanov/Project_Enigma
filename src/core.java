@@ -58,8 +58,8 @@ public class core
 				System.out.println("To the north there was a lookout tower,\n"
 						+"visible above the trees mounting to the northern hill.\n"
 						+"\n"
-						+"To the west, wheres there's little amount of trees,\n"
-						+"is the outline of what appears to be a cabin.\n"
+						+"To the west, there were few trees,\n"
+						+"the only thing notable was what appeared to be an outline of a cabin.\n"
 						+"\n"
 						+"The last thing you notice is a path that leads south.\n"
 						+"Bending slightly between the trees.\n"
@@ -82,8 +82,9 @@ public class core
 			int intchecker = 4;
 			while (intchecker == 4)
 			{
+				//input.nextLine();
 				intchecker = SelErrHandler(input);
-				//intchecker = locationselect(input);
+				System.out.println(intchecker);
 			}
 			locationselect(intchecker);
 		}
@@ -127,33 +128,43 @@ public class core
 	}	
 	public static int SelErrHandler(Scanner input)
 	{ // Handlers integer based inputs from the user
-		int selecter;
+		String selecter;
 		try
 		{ // Remember! nextLine is for String, nextInt is for Integer
-			selecter = input.nextInt();
-			switch(selecter)
+			selecter = input.nextLine();
+			
+			if (selecter.equals("1"))
 			{
-				case 1:
-					return 1;
-				case 2:
-					return 2;
-				case 3:
-					return 3;
-				default:
-					System.out.println("Please provide a valid integer");
-					System.out.println("'1' or '2' or '3' are your valid choices");
-					return 4;
+				return 1;
+				
+			}
+			else if (selecter.equals("2"))
+			{
+				return 2;
+				
+			}
+			else if (selecter.equals("3"))
+			{
+				return 3;
+				
+			}
+			else
+			{
+				System.out.println("You've provided an incorrect integer");
+				System.out.println("Please enter...");
+				System.out.println("Just the integer '1'");
+				System.out.println(selecter);
 			}
 			
 		}
 		catch (Exception E)
 		{
-			System.out.println("Please provide a valid integer");
+			System.out.println("Please an integer and not any other character");
 			System.out.println("'1' or '2' or '3' are your valid choices");
+			//selecter = input.nextInt();
 		}
-		
-		
 		return 4;
+		
 	}
 	public static void locationselect(int input)
 	{ // Meanwhile here is the selector of the three locations the user can go to
