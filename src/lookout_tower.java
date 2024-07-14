@@ -37,10 +37,10 @@ public class lookout_tower
 		if (count == 1)
 		{
 			Spaceadder(2);
-			System.out.println("You begin to climb,"
-					+ "the ladder groaned at the pressure of your weight."
-					+ "You could feel your heart beat and body tense the higher you went."
-					+ "It was quite a way up but you knew you had little other options.");
+			System.out.println("You begin to climb, \n"
+					+ "the ladder groaned at the pressure of your weight. \n"
+					+ "You could feel your heart beat and body tense the higher you went. \n"
+					+ "It was quite a way up but you knew you had little other options. \n");
 			
 			System.out.println("Type in Continue\n");
 			while (checker == false)
@@ -55,9 +55,18 @@ public class lookout_tower
 				System.out.println("You finally make it up inside the lookout tower. \n"
 						+ "You notice three things, \n"
 						+ "a chest to the left of you, a torn poster above it and a view of the forest. \n"
-						+ "");
+						+ "What do you choose to look at? \n");
 				
 			}
+			while (checker == false)
+			{
+				System.out.println("Enter '1' to look at the poster. \n"
+						+ "Enter '2' to look at the locked chest. \n"
+						+ "Enter '3' to look at the view \n"
+						);
+				count = LTErrHandler(input);
+			}
+			
 		}
 		
 	
@@ -133,5 +142,31 @@ public class lookout_tower
 			System.out.println("'Enter' OR 'Exit' for their following actions");
 		}
 		return false;
+	}
+	public static int LTErrHandler(Scanner input)
+	{
+		String selecter; // here we are specifying the input to a string variable.
+		selecter = input.nextLine();
+		try
+		{
+			if (selecter.equals(1))
+			{
+				return 1;
+			}
+			else if (selecter.equals(2))
+			{
+				return 2;
+			}
+			else if (selecter.equals(3))
+			{
+				return 3;
+			}
+		}
+		catch (Exception E)
+		{
+			System.out.println("Please an integer and not any other character");
+			System.out.println("'1' or '2' or '3' are your valid choices");
+		}
+		return 1;
 	}
 }
