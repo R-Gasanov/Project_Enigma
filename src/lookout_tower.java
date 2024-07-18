@@ -62,9 +62,41 @@ public class lookout_tower
 			{
 				System.out.println("Enter '1' to look at the poster. \n"
 						+ "Enter '2' to look at the locked chest. \n"
-						+ "Enter '3' to look at the view \n"
+						+ "Enter '3' to look at the view. \n"
+						+ "Enter '4' to head back. \n"
 						);
 				count = LTErrHandler(input);
+				if (count == 1)
+				{
+					Spaceadder(2);
+					System.out.println("You decide to look at the poster, \n"
+							+ "It was ripped quite badly but you were able to make out its content. \n"
+							+ "'Welcome to C--------- -----nal Park lookout tower! \n"
+							+ "Here you get to sight see and look at the wonderious views, \n"
+							+ "in which the highlands have to offer. \n"
+							+ "From here we can see three lochs amongst the one forest we're in. \n"
+							+ "The park has seen a--und two-hundred and eighty bird sp--ies too! \n"
+							+ "We eve- have --- of the hig---t mountain peaks in all of the --!' \n"
+							+ "Thats about as much as you could read from the poster itself. \n");
+				}
+				else if (count == 2)
+				{ // 32801 is the correct combination
+					Spaceadder(2);
+					System.out.println("You decide to look at the locked chest. \n"
+							+ "You of course try to open to no avail. \n"
+							+ "From further inspection though there appears to be a number pad. \n"
+							+ "It had five rows with numbers ranging from zero to nine. \n"
+							+ "What do you choose to do? \n");
+					
+					while (checker == false)
+					{
+						System.out.println("Enter '1' to attempt to unlock the chest. \n"
+								+ "Enter '2' to look elsewhere. \n");
+						count = SelErrHandler(input);
+						
+					}
+				}
+				
 			}
 			
 		}
