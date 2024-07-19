@@ -19,7 +19,7 @@ public class lookout_tower
 				+ "Where do you choose to go? \n");
 		
 		// Below is the prerequisite for us to take in the input and do a check for the users input
-		int count = 0;
+		int count = 0, lock = 0;
 		boolean checker = false;
 		Scanner input = new Scanner(System.in);
 		
@@ -66,6 +66,8 @@ public class lookout_tower
 						+ "Enter '4' to head back. \n"
 						);
 				count = LTErrHandler(input);
+				
+				// System.out.println(count + "Is the count");
 				if (count == 1)
 				{
 					Spaceadder(2);
@@ -81,22 +83,55 @@ public class lookout_tower
 				}
 				else if (count == 2)
 				{ // 32801 is the correct combination
-					Spaceadder(2);
-					System.out.println("You decide to look at the locked chest. \n"
-							+ "You of course try to open to no avail. \n"
-							+ "From further inspection though there appears to be a number pad. \n"
-							+ "It had five rows with numbers ranging from zero to nine. \n"
-							+ "What do you choose to do? \n");
-					
-					while (checker == false)
+					if (lock == 0)
 					{
-						System.out.println("Enter '1' to attempt to unlock the chest. \n"
-								+ "Enter '2' to look elsewhere. \n");
-						count = SelErrHandler(input);
+						Spaceadder(2);
+						System.out.println("You decide to look at the locked chest. \n"
+								+ "You of course try to open to no avail. \n"
+								+ "From further inspection though there appears to be a number pad. \n"
+								+ "It had five rows with numbers ranging from zero to nine. \n"
+								+ "What do you choose to do? \n");
 						
+						while (true)
+						{
+							System.out.println("Enter '1' to attempt to unlock the chest. \n"
+									+ "Enter '2' to look elsewhere. \n");
+							count = SelErrHandler(input);
+							if (count == 1)
+							{
+								Spaceadder(2);
+								System.out.println("You pick up the lock pad and try your attempt... \n"
+										+ "Enter the correct five number value, an example '12345'... \n");
+								int result;
+								result = ChestLockCheck(input);
+								if (result == 5)
+								{
+									lock = 1;
+								}
+								else if (result == 4)
+								{
+									Spaceadder(2);
+									System.out.println("When you put in that combination you hear a subtle click. \n"
+											+ "But unfortunately it still stays locked... \n"
+											+ "You sigh in irritation, hoping the next combination you put in solves it. \n");
+									
+								}
+							}
+							else if (count == 2)
+							{
+								break;
+							}
+						}
+					}
+					else if (lock == 1)
+					{
+						System.out.println("There's nothing left to find inside the chest. \n");
 					}
 				}
-				
+				else if (count == 3)
+				{
+					Spaceadder(2);
+				}
 			}
 			
 		}
@@ -181,15 +216,15 @@ public class lookout_tower
 		selecter = input.nextLine();
 		try
 		{
-			if (selecter.equals(1))
+			if (selecter.equals("1"))
 			{
 				return 1;
 			}
-			else if (selecter.equals(2))
+			else if (selecter.equals("2"))
 			{
 				return 2;
 			}
-			else if (selecter.equals(3))
+			else if (selecter.equals("3"))
 			{
 				return 3;
 			}
@@ -199,6 +234,41 @@ public class lookout_tower
 			System.out.println("Please an integer and not any other character");
 			System.out.println("'1' or '2' or '3' are your valid choices");
 		}
-		return 1;
+		return 4;
+	}
+	public static int ChestLockCheck(Scanner input)
+	{
+		String combination = input.nextLine();
+		//32801 is the answer here, and we want to make sure that we get this result
+		try
+		{
+			if (combination.equals("32801"))
+			{
+				System.out.println("After trying that sequence you hear a click in the lock, \n"
+						+ "You feel this little ball of joy jump in you as you open the chest. \n"
+						+ "You find a scrumbled up note, \n"
+						+ "'Arran, heres the key to the Kabin incase you get stuck here overnight. \n"
+						+ "Fiona.' \n"
+						+ "Below the note, you find a key. \n");
+				
+				System.out.println("Type in Continue\n");
+				
+				// Ensuring we are breaking everything into segments for the user 
+				
+				Boolean ChestLockchecker = false;
+				
+				while (ChestLockchecker == false)
+				{
+					ChestLockchecker = LocErrHandler(input);
+				}
+				return 5;
+			}
+		}
+		catch (Exception e)
+		{
+			System.out.println("Please an integer and not any other character");
+			System.out.println("'1' or '2' are your valid choices");
+		}
+		return 4;
 	}
 }
