@@ -77,16 +77,26 @@ public class core
 			System.out.println("Enter '1' for the Lookout Tower.\n"
 					+ "Enter '2' for the Cabin.\n"
 					+ "Enter '3' for the southern path.\n"
+					+ "Enter '4' to look at your inventory \n"
 					);
 			
-			int intchecker = 4;
-			while (intchecker == 4)
+			int intchecker = 5;
+			while (intchecker == 5)
 			{
 				//input.nextLine();
 				intchecker = SelErrHandler(input);
-				System.out.println(intchecker);
+				System.out.println("This is the intchecker" + intchecker);
 			}
-			locationselect(intchecker);
+			
+			// Below we are doing the inventory if its 4 or the location if its everything else
+			if ( intchecker == 4)
+			{
+				inventorycheck();
+			}
+			else // Head back to choosing a location
+			{
+				locationselect(intchecker);
+			}
 		}
 
 		
@@ -148,6 +158,10 @@ public class core
 				return 3;
 				
 			}
+			else if (selecter.equals("4"))
+			{
+				return 4;
+			}
 			else
 			{
 				System.out.println("You've provided an incorrect integer");
@@ -163,7 +177,7 @@ public class core
 			System.out.println("'1' or '2' or '3' are your valid choices");
 			//selecter = input.nextInt();
 		}
-		return 4;
+		return 5;
 		
 	}
 	public static void locationselect(int input)
@@ -188,5 +202,29 @@ public class core
 			rustic_car location_go = new rustic_car();
 			location_go.rustic_car();
 		}
+	}
+	public static void inventorycheck()
+	{
+		// Here we will be checking what we have in the inventory
+		inventory inventory = new inventory();
+		
+		Spaceadder(2);
+		System.out.println("Within your inventory, you have... \n");
+		
+		if (inventory.getrustycompass() == true)
+		{
+			System.out.println("A rusty compass. \n");
+		}
+		if (inventory.getkabinkey() == true)
+		{
+			System.out.println("A key to the cabin. \n");
+		}
+		if (inventory.getnote() == true)
+		{
+			System.out.println("A note from the lookout tower. \n");
+		}
+		
+		
+		
 	}
 }

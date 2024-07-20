@@ -19,6 +19,7 @@ public class lookout_tower
 				+ "Where do you choose to go? \n");
 		
 		// Below is the prerequisite for us to take in the input and do a check for the users input
+		
 		int count = 0, lock = 0;
 		boolean checker = false;
 		Scanner input = new Scanner(System.in);
@@ -249,6 +250,8 @@ public class lookout_tower
 	public static int ChestLockCheck(Scanner input)
 	{
 		String combination = input.nextLine();
+		
+		inventory inventory = new inventory();
 		//32801 is the answer here, and we want to make sure that we get this result
 		try
 		{
@@ -260,6 +263,10 @@ public class lookout_tower
 						+ "'Arran, heres the key to the Kabin incase you get stuck here overnight. \n"
 						+ "Fiona.' \n"
 						+ "Below the note, you find a key. \n");
+				
+				inventory.setkabinkey(true);
+				inventory.setnote(true);
+				
 				
 				System.out.println("Type in Continue\n");
 				

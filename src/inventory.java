@@ -13,10 +13,16 @@ public class inventory
 	// -> And as you guessed it, the setter literally sets the value of the variable
 	
 	private boolean 
+		rustycompass = true,
 		kabinkey = false, 
 		note = false, 
 		carkey = false, 
 		carfuel = false;
+	
+	public boolean getrustycompass()
+	{
+		return rustycompass;
+	}
 	
 	public boolean getkabinkey()
 	{
