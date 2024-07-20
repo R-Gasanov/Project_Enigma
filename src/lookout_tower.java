@@ -76,7 +76,7 @@ public class lookout_tower
 							+ "'Welcome to C--------- -----nal Park lookout tower! \n"
 							+ "Here you get to sight see and look at the wonderious views, \n"
 							+ "in which the highlands have to offer. \n"
-							+ "From here we can see three lochs amongst the one forest we're in. \n"
+							+ "From here we can see three lochs amongst forest we're in. \n"
 							+ "The park has seen a--und two-hundred and eighty bird sp--ies too! \n"
 							+ "We eve- have --- of the hig---t mountain peaks in all of the --!' \n"
 							+ "Thats about as much as you could read from the poster itself. \n");
@@ -131,6 +131,16 @@ public class lookout_tower
 				else if (count == 3)
 				{
 					Spaceadder(2);
+					System.out.println("You decide to look at the view from the lookout tower. \n"
+							+ "Here you can see a large expanse of where you are, \n"
+							+ "in hopes of finding a way out. \n"
+							+ "Although, all you see is the continuation of wilderness endlessly. \n"
+							+ "With trees and hills stretching out for miles. \n"
+							+ "The only notable thing is you see is one large mountain peak from the view. \n");
+				}
+				else if (count == 4)
+				{
+					checker = true;
 				}
 			}
 			
