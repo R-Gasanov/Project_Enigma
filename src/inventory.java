@@ -12,12 +12,39 @@ public class inventory
 	
 	// -> And as you guessed it, the setter literally sets the value of the variable
 	
-	private boolean 
-		rustycompass = true,
-		kabinkey = false, 
-		note = false, 
-		carkey = false, 
+	// We will be doing a singleton instance to ensure multiple classes do affect the change
+	
+	private static inventory instance;
+	
+	private inventory()
+	{
+		rustycompass = true;
+		kabinkey = false;
+		note = false;
+		carkey = false; 
 		carfuel = false;
+	}
+	
+	// Below we are fetching the private inventory and expressing
+	
+	public static inventory getInstance()
+	{
+		if (instance == null)
+		{
+			instance = new inventory();
+		}
+		return instance;
+	}
+	
+	// Then here we have the user's items
+	
+	private boolean
+		rustycompass = true,
+		kabinkey = false,
+		note = false,
+		carkey = false,
+		carfuel = false;
+		
 	
 	public boolean getrustycompass()
 	{

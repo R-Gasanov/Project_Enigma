@@ -206,25 +206,22 @@ public class core
 	public static void inventorycheck()
 	{
 		// Here we will be checking what we have in the inventory
-		inventory inventory = new inventory();
+		inventory inv =  inventory.getInstance();
 		
 		Spaceadder(2);
 		System.out.println("Within your inventory, you have... \n");
 		
-		if (inventory.getrustycompass() == true)
+		if (inv.getrustycompass() == true)
 		{
 			System.out.println("A rusty compass. \n");
 		}
-		if (inventory.getkabinkey() == true)
+		if (inv.getkabinkey() == true)
 		{
 			System.out.println("A key to the cabin. \n");
 		}
-		if (inventory.getnote() == true)
+		if (inv.getnote() == true)
 		{
 			System.out.println("A note from the lookout tower. \n");
 		}
-		
-		
-		
 	}
 }

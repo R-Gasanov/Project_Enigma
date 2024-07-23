@@ -251,7 +251,7 @@ public class lookout_tower
 	{
 		String combination = input.nextLine();
 		
-		inventory inventory = new inventory();
+		inventory inv =  inventory.getInstance();
 		//32801 is the answer here, and we want to make sure that we get this result
 		try
 		{
@@ -264,8 +264,8 @@ public class lookout_tower
 						+ "Fiona.' \n"
 						+ "Below the note, you find a key. \n");
 				
-				inventory.setkabinkey(true);
-				inventory.setnote(true);
+				inv.setkabinkey(true);
+				inv.setnote(true);
 				
 				
 				System.out.println("Type in Continue\n");
