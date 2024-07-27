@@ -5,7 +5,7 @@ public class inventory
 	
 	/*
 	 *  In addition we will be using setters and getters.
-	 *  Meaning I will need to learn and understand how to user them in future pretenses within coding
+	 *  Meaning I will need to learn and understand how to user them in future pretences within coding
 	 */
 	
 	// -> So to understand a getter literally just prints out the variable for you
@@ -23,6 +23,7 @@ public class inventory
 		note = false;
 		carkey = false; 
 		carfuel = false;
+		gun = false;
 	}
 	
 	// Below we are fetching the private inventory and expressing
@@ -43,7 +44,8 @@ public class inventory
 		kabinkey = false,
 		note = false,
 		carkey = false,
-		carfuel = false;
+		carfuel = false,
+		gun = false;
 		
 	
 	public boolean getrustycompass()
@@ -70,6 +72,10 @@ public class inventory
 	{
 		return carfuel;
 	}
+	public boolean getgun()
+	{
+		return gun;
+	}
 	
 	// Now we will be making the setters to modify the variables for future uses
 	
@@ -93,6 +99,10 @@ public class inventory
 	public void setcarfuel(boolean carfuel)
 	{
 		this.carfuel = carfuel;
+	}
+	public void setgun(boolean gun)
+	{
+		this.gun = gun;
 	}
 	
 	//As you can see above, we now have the setters.

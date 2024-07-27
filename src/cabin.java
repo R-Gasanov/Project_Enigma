@@ -100,6 +100,10 @@ public class cabin
 						+ "Enter '6' to look at the bathroom door. \n"
 						+ "Enter '7' to go back. \n");
 				location = LocKabinHandler(input);
+				if (location == 1)
+				{
+					desk();
+				}
 			}
 		}
 		
@@ -185,9 +189,96 @@ public class cabin
 		
 		return 0;
 	}
+	public static int SelErrHandler(Scanner input)
+	{
+		
+		try
+		{
+			String outcome = input.nextLine();
+			if (outcome.equals("1"))
+			{
+				return 1;
+			}
+			else if (outcome.equals("2"))
+			{
+				return 2;
+			}
+			else if (outcome.equals("3"))
+			{
+				return 3;
+			}
+		}
+		catch (Exception E)
+		{
+			System.out.println("Please an integer and not any other character");
+			System.out.println("'1' or '2' or '3' are your valid choices");
+		}
+		return 4;
+	}
 	public static void desk()
 	{
+		boolean checker = false;
 		Spaceadder(2);
+		System.out.println("The desk was to the right of you. \n"
+				+ "It was accompanied with a little lantern with candle that died. \n"
+				+ "There was one last match stick left beside so you don't hesitate to light it up. \n"
+				+ "Besides that, there were a couple of other things alongside it. \n"
+				+ "One being a post it note and another being a letter. \n"
+				+ "Which do you choose to read? \n");
+		
+		
+		Scanner input = new Scanner(System.in);
+		int result = 4;
+		while (result != 3)
+		{
+			System.out.println("Enter '1' for the letter. \n"
+					+ "Enter '2' for the post it note. \n"
+					+ "Enter '3' look elsewhere. \n");
+			
+			result = SelErrHandler(input);
+			if (result == 1)
+			{
+				Spaceadder(2);
+				System.out.println("You decide to look at the letter, \n"
+						+ "\n"
+						+ "Hey Arran,\n"
+						+ "\n"
+						+ "I’ll keep this short. You remember what I told you earlier back in the truck? \n"
+						+ "I’m sorry I wasn’t able to come after all, I had to check up on Bonnie in the hospital.\n"
+						+ "\n"
+						+ "After she had that bad fall from the lookout tower, I couldn’t have kept her all alone in there. \n"
+						+ "\n"
+						+ "She didn’t have anyone to talk to, and no one would understand her. \n"
+						+ "\n"
+						+ "Especially with her talking about her visions. \n"
+						+ "\n"
+						+ "No doctor would believe her Clairvoyance.\n"
+						+ "\n"
+						+ "I’m glad you managed to make it inside, its safe in here. \n"
+						+ "\n"
+						+ "I’ve accidentally left the place in a bit of a mess too. \n"
+						+ "\n"
+						+ "You know me loving my post it notes. I’m always picky especially on the colouring. \n"
+						+ "\n"
+						+ "My favourites being Emerald and Calamime, I never liked the name of it being pink or green anyways. \n"
+						+ "\n"
+						+ "I hope that helps, I’m sorry for leaving you there alone. \n"
+						+ "\n"
+						+ "I wish you luck.\n"
+						+ "Stay Safe, \n"
+						+ "\n"
+						+ "From Fiona - The best Conservationist in all of Britannia \n");
+			}
+			else if (result == 2)
+			{
+				Spaceadder(2);
+				System.out.println("Psst Bonnie, \n"
+						+ "I’ve heard Duncan hired a new replacement already. \n"
+						+ "Pray to me they’re another girl. \n"
+						+ "The quantity of guys and girls here isn’t equal enough here, sorry lads! \n"
+						+ "Fiona \n");
+			}
+		}
 		
 	}
 }
