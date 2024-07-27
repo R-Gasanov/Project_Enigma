@@ -71,7 +71,7 @@ public class cabin
 					+ "The moment you do, your headache worsens. \n"
 					+ "You take haste and attempt to rebalance yourself. \n"
 					+ "Finally after it weakens again you get to look around. \n"
-					+ "It looked suprisingly cosy,"
+					+ "It looked suprisingly cosy, \n"
 					+ "with post it notes stuck around everywhere and furniture that made it look like a bedroom. \n"
 					+ "There was another room to your left as well too. Leading to the bathroom. \n"
 					+ "But wait... you haven't been here at all to know that? \n"
@@ -111,6 +111,22 @@ public class cabin
 				else if(location == 3)
 				{
 					cabinet();
+				}
+				else if(location == 4)
+				{
+					bed();
+				}
+				else if(location == 5)
+				{
+					bedside_table();
+				}
+				else if(location == 6)
+				{
+					bathroom_door();
+				}
+				else if(location == 7)
+				{
+					checker = true;
 				}
 				
 			}
@@ -197,6 +213,32 @@ public class cabin
 		
 		
 		return 0;
+	}
+	public static int bathroomdoor(Scanner input)
+	{
+		inventory inv = inventory.getInstance();
+		
+		try
+		{
+			String result = input.nextLine();
+			if (result.equals("07"))
+			{
+				inv.setcarfuel(true);
+				return 1;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		catch (Exception e)
+		{
+			System.out.println("Please an integer and not any other character");
+			System.out.println("'1' or '2' are your valid choices");
+		}
+		
+		return 2;
+		
 	}
 	public static int SelErrHandler(Scanner input)
 	{
@@ -335,7 +377,7 @@ public class cabin
 						+ "Pray to me they’re another girl. \n"
 						+ "The quantity of guys and girls here isn’t equal enough here, sorry lads! \n"
 						+ "Fiona' \n"
-						+ "Behind the post it note was a number, '2'. ");
+						+ "Behind the post it note was a number, '2'. \n");
 			}
 		}
 		
@@ -470,5 +512,143 @@ public class cabin
 		
 		
 		
+	}
+	public static void bed()
+	{
+		Spaceadder(2);
+		System.out.println("You decide to go and look at the bed. \n"
+				+ "It was to the far right of the room where there was a window covered with curtains. \n"
+				+ "There wasn't much to it, it had thick covered for warmth with a foresty design. \n"
+				+ "On top of it was a post it note. \n"
+				+ "What do you choose to look at? \n");
+		
+		Scanner input = new Scanner(System.in);
+		int result = 4;
+		while (result != 3)
+			{
+				System.out.println("Enter '1' look around the bed. \n"
+						+ "Enter '2' for the post it note. \n"
+						+ "Enter '3' to look elsewhere. \n");
+				result = SelErrHandler(input);
+				if (result == 1)
+				{
+					Spaceadder(2);
+					System.out.println("You look around the bed and pull the covers. \n"
+							+ "But you find nothing of value or use. \n");
+				}
+				else if (result == 2)
+				{
+					Spaceadder(2);
+					System.out.println("You decide to look at the post it note, the colour is blue. \n"
+							+ "\n"
+							+ "Archie hey! \n"
+							+ "Welcome to the team. \n"
+							+ "We work around this specific site in the park. \n"
+							+ "I’m sure you’ve gotten to known Bryce, his thriller on the arts. \n"
+							+ "Quite the painter am I right? \n"
+							+ "The Kabin here is our head quarters, \n"
+							+ "we do our gatherings here. \n"
+							+ "Hope you feel welcome :) \n"
+							+ "Bonnie \n"
+							+ "Behind the post it note was a number, '1'. \n");
+				}
+			}
+		
+		
+	}
+	public static void bedside_table()
+	{
+		Spaceadder(2);
+		System.out.println("You decide to look at the bedside table,"
+				+ "which was at the rightside of the bed. \n"
+				+ "You find the desk lamb lighting up the majority of Cabin. \n"
+				+ "Other than that you find a post it note. \n"
+				+ "What do you choose to look that. \n");
+		
+		Scanner input = new Scanner(System.in);
+		int result = 4;
+		while (result != 3)
+		{
+			System.out.println("Enter '1' look at the bedside cabinet drawers. \n"
+					+ "Enter '2' for the post it note. \n"
+					+ "Enter '3' to look elsewhere. \n");
+			result = SelErrHandler(input);
+			if (result == 1)
+			{
+				System.out.println("You open the bed drawers. \n"
+						+ "But you find nothing of value. \n");
+			}
+			else if (result == 2)
+			{
+				System.out.println("You decide to look at the post it note, the colour is yellow. \n"
+						+ " \n"
+						+ "Hey guys! \n"
+						+ "I’ve already told Fiona and Arran, \n"
+						+ "but she let me to use one of her post it notes as a good bye message. \n"
+						+ "Thank you so much for having me! \n"
+						+ "It was a pleasure working with you all. \n"
+						+ "Sorry I couldn’t tell you all in person.\n"
+						+ "Love James \n."
+						+ "Behind the post it note was a number, '3'.");
+			}
+		}
+	}
+	public static void bathroom_door()
+	{
+		Scanner input = new Scanner(System.in);
+		Spaceadder(2);
+		System.out.println("You decide to go to the bath room. \n"
+				+ "It was stationed directly on the left of the room. \n"
+				+ "You attempt to open the door but of course theres another lock. \n"
+				+ "You then notice the label to the left side of the door stuck to the wall. \n"
+				+ "'Hey hey! The code is the amount of people in our team. \n"
+				+ "Its a smart way of people not leaching our bathroom. \n"
+				+ "Love Bonnie.' \n");
+		
+		 System.out.println("Enter in 'Continue'");
+		 
+		 boolean checker = false;
+		 if (checker == false)
+		 {
+			 checker = LocErrHandler(input);
+		 }
+		 Spaceadder(2);
+		 System.out.println("You look at the lock more closely. \n"
+		 			+ "It appeared to a be a three digit num pad, \n"
+		 			+ "with numbers going from zero to nine. \n "
+		 			+ "What do you choose to do? \n");
+		 int result = 4;
+		 while (result != 3)
+			 {
+			 	
+			 	Spaceadder(2);
+			 	System.out.println("Enter '1' look back at the label on the wall. \n"
+						+ "Enter '2' to try and unlock the door. \n"
+						+ "Enter '3' to look elsewhere. \n");
+			 	result = bathroomdoor(input);
+			 	if (result == 1)
+			 	{
+			 		System.out.println("'Hey hey! \n"
+			 				+ "The code is the amount of people in our team. \n"
+			 				+ "Its a smart way of people not leaching our bathroom. \n"
+			 				+ "Love Bonnie.' \n");
+			 	}
+			 	else if (result == 2)
+			 	{
+			 		int answer = 0;
+			 		System.out.println("You attempt your luck at unlocking the door... \n"
+			 				+ "Enter the correct five number value, an example '123'... \n");
+			 		answer = bathroomdoor(input);
+			 		if (answer == 1)
+			 		{
+			 			System.out.println("You manage to get inside the bathroom door. \n"
+			 					+ "Inside, you find a normal bathroom but to the right is a fuel canister. \n"
+			 					+ "You attempt to pick it up, and you fill it still being full. \n"
+			 					+ "Part of you thinks this might be useful.");
+			 		}
+			 	}
+			 }
+		 
+		 
 	}
 }
