@@ -104,6 +104,15 @@ public class cabin
 				{
 					desk();
 				}
+				else if (location == 2)
+				{
+					notice_board();
+				}
+				else if(location == 3)
+				{
+					cabinet();
+				}
+				
 			}
 		}
 		
@@ -215,16 +224,63 @@ public class cabin
 		}
 		return 4;
 	}
+	public static int CabinetLock(Scanner input)
+	{
+		inventory inv = inventory.getInstance();
+		//boolean checker = false;
+		try
+		{
+			String combination = input.nextLine();
+			if (combination.toLowerCase().equals("bryce"))
+			{
+				System.out.println("You hear a beep as the lock opens up. \n"
+						+ "You couldn't tell whether or not you were thrilled or scared at opening it. \n"
+						+ "You spare no time opening the cabinet. \n"
+						+ "In it, you find a gun and another post it note. \n"
+						+ "'Arran, if your reading this, I'm sorry. \n"
+						+ "Thank dear Irene that you were smart enough to figure it out, I knew you would! \n"
+						+ "I'm keeping Bonnie safe, \n"
+						+ "but he knows about us and he's trying to find anyone one of us before we escape out the park. \n"
+						+ "I'm not good with a rifle but I remember you said you were a detective at some point. \n"
+						+ "Please, I'm stuck with Bonnie here too somewhere in the park. \n"
+						+ "Take the car, it does actually work. I've just told him it doesn't so it'll save us some time. \n"
+						+ "Please, escape out of the park and contact the police! \n"
+						+ "\n"
+						+ "May Irene be with you... Fiona. \n"
+						+ "... \n"
+						+ "You grab the gun with you. It has two rounds left inside of it. \n");
+				
+				inv.setgun(true);
+				return 3;
+			}
+			else if (combination.equals("0"))
+			{
+				return 0;
+			}
+			else
+			{
+				System.out.println("You hear a hard beep. \n"
+						+ "You try and open the lock but its still bardged shut. \n"
+						+ "Looks like you'll need to to try another combination. \n");
+			}
+		}	
+		catch (Exception E)
+		{
+			System.out.println("Please an integer and not any other character");
+			System.out.println("'1' or '2' are your valid choices");
+		}
+		return 1;
+	}
 	public static void desk()
 	{
-		boolean checker = false;
+		//boolean checker = false;
 		Spaceadder(2);
-		System.out.println("The desk was to the right of you. \n"
+		System.out.println("You approach the desk that was to the left of you. \n"
 				+ "It was accompanied with a little lantern with candle that died. \n"
 				+ "There was one last match stick left beside so you don't hesitate to light it up. \n"
 				+ "Besides that, there were a couple of other things alongside it. \n"
 				+ "One being a post it note and another being a letter. \n"
-				+ "Which do you choose to read? \n");
+				+ "Which do you choose to look at? \n");
 		
 		
 		Scanner input = new Scanner(System.in);
@@ -233,7 +289,7 @@ public class cabin
 		{
 			System.out.println("Enter '1' for the letter. \n"
 					+ "Enter '2' for the post it note. \n"
-					+ "Enter '3' look elsewhere. \n");
+					+ "Enter '3' to look elsewhere. \n");
 			
 			result = SelErrHandler(input);
 			if (result == 1)
@@ -272,13 +328,147 @@ public class cabin
 			else if (result == 2)
 			{
 				Spaceadder(2);
-				System.out.println("Psst Bonnie, \n"
+				System.out.println("You decide to look at the post it note, the colour is red. \n"
+						+ "\n"
+						+ "'Psst Bonnie, \n"
 						+ "I’ve heard Duncan hired a new replacement already. \n"
 						+ "Pray to me they’re another girl. \n"
 						+ "The quantity of guys and girls here isn’t equal enough here, sorry lads! \n"
-						+ "Fiona \n");
+						+ "Fiona' \n"
+						+ "Behind the post it note was a number, '2'. ");
 			}
 		}
+		
+	}
+	public static void notice_board()
+	{
+		Spaceadder(2);
+		System.out.println("You made your way to the notice board, \n"
+				+ "It was to the left of the cabinet and right of the desk. \n"
+				+ "You noticed some newspaper pieces stuck across the board and a post it note. \n"
+				+ "Which do you choose look at?");
+		
+		Scanner input = new Scanner(System.in);
+		int result = 4;
+		while (result != 3)
+		{
+			System.out.println("Enter '1' for the newspaper pieces. \n"
+					+ "Enter '2' for the post it note. "
+					+ "Enter '3' to look elsewhere. \n");
+			result = SelErrHandler(input);
+			if (result == 1 )
+			{
+				System.out.println("You decide to look at the multiple torn pieces of newspaper. \n"
+						+ "\n"
+						+ "Most of them were unreadable referencing weather pollution and new species descoveries. \n"
+						+ "Although the one thing that caught your eye was the supposed dissapearences. \n"
+						+ "It read. \n" // Felix Anderson is NOT the main character
+						+ "'Multiple dissaperances have been occuring in the national park. \n"
+						+ "Authorities are investigating whether or not this is linked to the dissaperance to one of the employees. \n"
+						+ "F----- -------- the local park ranger had gone missing six years ago. \n"
+						+ "Neither of the three missing individuals have been found, despite searches around the park. \n"
+						+ "The most popular theory is that they all drowned in one of the many lochs found at the park. \n"
+						+ "Although no evidence suggests this happened.' \n"
+						+ "\n"
+						+ "Thats about all the torn paper had, you wonder why the name had been marked on over. \n"
+						+ "Beside it, another small paper pinned to the board had a number written. \n"
+						+ "'3+1' ARE NOW MISSING. \n"
+						+ "You feel a chill run up your spine. \n");
+			}
+			else if (result == 2)
+			{
+				System.out.println("You decide to look at the post it note, the colour is green. \n"
+						+ "\n"
+						+ "'Fiona, sorry for using one of these. \n"
+						+ "But I don’t have any means of contacting you right away. "
+						+ "Andrew, the shipment guy has brought you the thing you were waiting for. \n"
+						+ "Its the wired nest box camera you wanted. Its in the cabinet.\n"
+						+ "Bryce.' \n"
+						+ "Behind the post it note was a number, '5'. \n");
+			}
+		}
+		
+		
+	}
+	public static void cabinet()
+	{
+		Spaceadder(2);
+		System.out.println("You make your way to the cabinet. \n"
+				+ "It was at the corner left of the room, looming over everything. \n"
+				+ "You notice a post it not strapped to one of its door. \n"
+				+ "A five letter lock prevented you from opening the cabinet. \n"
+				+ "The only other thing you find is a package filled with post it notes. \n");
+		
+		System.out.println("Enter in 'Continue");
+		
+		Scanner input = new Scanner(System.in);
+		
+		boolean checker = false;
+		while (checker == false)
+		{
+			checker = LocErrHandler(input);
+			
+		}
+		checker = false;
+		Spaceadder(2);
+		System.out.println("You kneel down to the package. \n"
+				+ "You didn't really think nothing of it, \n"
+				+ "it was just where the package of post it notes were bought with but, \n"
+				+ "It looked like someone wrote something on it. \n"
+				+ "'Don't use unless you have my permission! \n"
+				+ "These are my well renowned post it notes. \n"
+				+ "And yes Arran even though it says pink and green on the package...\n"
+				+ "The Colours look more like Emerald and Calamime!' \n"
+				+ "On the back it does say the colours, \n"
+				+ "Yet where it would say green and pink are marked out and replaced with Camamile and Emerald. \n"
+				+ "... \n"
+				+ "What a strange person. \n");
+		
+		System.out.println("Enter in 'Continue");
+		
+		while (checker == false)
+		{
+			checker = LocErrHandler(input);
+			
+		}
+		checker = false;
+		int result = 4;
+		while (result != 3)
+		{
+			Spaceadder(2);
+			System.out.println("Enter '1' to try the lock of the cabinet. \n"
+					+ "Enter '2' for the post it note. \n"
+					+ "Enter '3' to look elsewhere. \n");
+			result = SelErrHandler(input);
+			if (result == 1)
+			{
+				int counter = 1;
+				while (counter == 1)
+				{
+					System.out.println("The lock was unique in a sense. \n"
+							+ "It was five letters long, \n"
+							+ "and had arrows up and down each letter to change it alphabetically. \n"
+							+ "You decide to give it an attempt... \n"
+							+ "Enter the correct five letter value, an example 'ABCDE'... \n"
+							+ "Or enter '0' to stop trying. \n");
+					counter = CabinetLock(input);
+				}
+			}
+			else if (result == 2)
+			{
+				System.out.println("You decide to look at the post it note, the colour is pink."
+						+ "\n"
+						+ "'Hey guys, in regards to the disappearances in the park stay careful okay? \n"
+						+ "We’ve already had one of us disappear. \n"
+						+ "Its the one year anniversary of Caitlin. \n"
+						+ "The previous conservationist before Fiona for those who don’t know. \n"
+						+ "Please stay safe. Arran.' \n"
+						+ "Behind the post it note was a number, '4'. \n");
+			}
+			
+		}
+		
+		
 		
 	}
 }

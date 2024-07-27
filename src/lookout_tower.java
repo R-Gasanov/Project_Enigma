@@ -249,12 +249,12 @@ public class lookout_tower
 	}
 	public static int ChestLockCheck(Scanner input)
 	{
-		String combination = input.nextLine();
 		
 		inventory inv =  inventory.getInstance();
 		//32801 is the answer here, and we want to make sure that we get this result
 		try
 		{
+			String combination = input.nextLine();
 			if (combination.equals("32801"))
 			{
 				System.out.println("After trying that sequence you hear a click in the lock, \n"
