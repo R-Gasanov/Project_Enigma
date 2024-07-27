@@ -221,7 +221,7 @@ public class cabin
 		try
 		{
 			String result = input.nextLine();
-			if (result.equals("07"))
+			if (result.equals("007"))
 			{
 				inv.setcarfuel(true);
 				return 1;
@@ -318,7 +318,7 @@ public class cabin
 		//boolean checker = false;
 		Spaceadder(2);
 		System.out.println("You approach the desk that was to the left of you. \n"
-				+ "It was accompanied with a little lantern with candle that died. \n"
+				+ "It was accompanied with a little lantern with a candle that had died. \n"
 				+ "There was one last match stick left beside so you don't hesitate to light it up. \n"
 				+ "Besides that, there were a couple of other things alongside it. \n"
 				+ "One being a post it note and another being a letter. \n"
@@ -342,6 +342,7 @@ public class cabin
 						+ "Hey Arran,\n"
 						+ "\n"
 						+ "I’ll keep this short. You remember what I told you earlier back in the truck? \n"
+						+ "\n"
 						+ "I’m sorry I wasn’t able to come after all, I had to check up on Bonnie in the hospital.\n"
 						+ "\n"
 						+ "After she had that bad fall from the lookout tower, I couldn’t have kept her all alone in there. \n"
@@ -363,6 +364,7 @@ public class cabin
 						+ "I hope that helps, I’m sorry for leaving you there alone. \n"
 						+ "\n"
 						+ "I wish you luck.\n"
+						+ "\n"
 						+ "Stay Safe, \n"
 						+ "\n"
 						+ "From Fiona - The best Conservationist in all of Britannia \n");
@@ -601,7 +603,7 @@ public class cabin
 				+ "It was stationed directly on the left of the room. \n"
 				+ "You attempt to open the door but of course theres another lock. \n"
 				+ "You then notice the label to the left side of the door stuck to the wall. \n"
-				+ "'Hey hey! The code is the amount of people in our team. \n"
+				+ "'Hey hey! The code is the current active number of people in our team. \n"
 				+ "Its a smart way of people not leaching our bathroom. \n"
 				+ "Love Bonnie.' \n");
 		
@@ -625,26 +627,34 @@ public class cabin
 			 	System.out.println("Enter '1' look back at the label on the wall. \n"
 						+ "Enter '2' to try and unlock the door. \n"
 						+ "Enter '3' to look elsewhere. \n");
-			 	result = bathroomdoor(input);
+			 	result = SelErrHandler(input);
 			 	if (result == 1)
 			 	{
+			 		Spaceadder(2);
 			 		System.out.println("'Hey hey! \n"
-			 				+ "The code is the amount of people in our team. \n"
+			 				+ "The code is the current active number of people in our team. \n"
 			 				+ "Its a smart way of people not leaching our bathroom. \n"
 			 				+ "Love Bonnie.' \n");
 			 	}
 			 	else if (result == 2)
 			 	{
 			 		int answer = 0;
+			 		Spaceadder(2);
 			 		System.out.println("You attempt your luck at unlocking the door... \n"
 			 				+ "Enter the correct five number value, an example '123'... \n");
 			 		answer = bathroomdoor(input);
 			 		if (answer == 1)
 			 		{
+			 			Spaceadder(2);
 			 			System.out.println("You manage to get inside the bathroom door. \n"
 			 					+ "Inside, you find a normal bathroom but to the right is a fuel canister. \n"
 			 					+ "You attempt to pick it up, and you fill it still being full. \n"
-			 					+ "Part of you thinks this might be useful.");
+			 					+ "Part of you thinks this might be useful. \n");
+			 		}
+			 		else if (answer == 2)
+			 		{
+			 			System.out.println("You try to apply the lock but it doesn't work... \n"
+			 					+ "You look elsewhere. \n");
 			 		}
 			 	}
 			 }

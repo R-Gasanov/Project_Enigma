@@ -38,7 +38,7 @@ public class startup
 				{
 					count = 2;
 				}
-				else
+	
 				{
 					System.out.println("You've provided an incorrect string");
 					System.out.println("Please type specifically either...");
