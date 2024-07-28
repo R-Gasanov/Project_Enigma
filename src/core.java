@@ -223,5 +223,13 @@ public class core
 		{
 			System.out.println("A note from the lookout tower. \n");
 		}
+		if (inv.getcarfuel() == true)
+		{
+			System.out.println("A red fuel canister. \n");
+		}
+		if (inv.getgun() == true)
+		{
+			System.out.println("A rifle with two bullets remaining.");
+		}
 	}
 }
