@@ -1,8 +1,7 @@
 
-public class rustic_car 
+public class rustic_truck
 {
-	// We'll leave this class here for now for potential future uses in the future.
-	public void rustic_car()
+	public void rustic_truck()
 	{
 		Spaceadder(10);
 		System.out.println("-------------Version 0.0.0.1--------------");
@@ -16,6 +15,13 @@ public class rustic_car
 				+ "You notice a truck beside the path, \n"
 				+ "Its state looked questionable. \n"
 				+ "As you approach the truck you notice it more clearly.");
+		
+		boolean checker = false;
+		
+		while (checker == false)
+		{
+			
+		}
 		
 	}
 	public static void Spaceadder(int space)

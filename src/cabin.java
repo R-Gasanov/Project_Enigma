@@ -155,6 +155,7 @@ public class cabin
 			}
 			else
 			{
+				Spaceadder(2);
 				System.out.println("You've provided an incorrect string");
 				System.out.println("Please enter...");
 				System.out.println("'Continue' following actions");
@@ -275,6 +276,7 @@ public class cabin
 			String combination = input.nextLine();
 			if (combination.toLowerCase().equals("bryce"))
 			{
+				Spaceadder(2);
 				System.out.println("You hear a beep as the lock opens up. \n"
 						+ "You couldn't tell whether or not you were thrilled or scared at opening it. \n"
 						+ "You spare no time opening the cabinet. \n"
@@ -301,6 +303,7 @@ public class cabin
 			}
 			else
 			{
+				Spaceadder(2);
 				System.out.println("You hear a hard beep. \n"
 						+ "You try and open the lock but its still bardged shut. \n"
 						+ "Looks like you'll need to to try another combination. \n");
@@ -329,6 +332,7 @@ public class cabin
 		int result = 4;
 		while (result != 3)
 		{
+			Spaceadder(2);
 			System.out.println("Enter '1' for the letter. \n"
 					+ "Enter '2' for the post it note. \n"
 					+ "Enter '3' to look elsewhere. \n");
@@ -397,7 +401,7 @@ public class cabin
 		while (result != 3)
 		{
 			System.out.println("Enter '1' for the newspaper pieces. \n"
-					+ "Enter '2' for the post it note. "
+					+ "Enter '2' for the post it note. \n"
 					+ "Enter '3' to look elsewhere. \n");
 			result = SelErrHandler(input);
 			if (result == 1 )
@@ -489,6 +493,7 @@ public class cabin
 				int counter = 1;
 				while (counter == 1)
 				{
+					Spaceadder(2);
 					System.out.println("The lock was unique in a sense. \n"
 							+ "It was five letters long, \n"
 							+ "and had arrows up and down each letter to change it alphabetically. \n"
@@ -500,7 +505,8 @@ public class cabin
 			}
 			else if (result == 2)
 			{
-				System.out.println("You decide to look at the post it note, the colour is pink."
+				Spaceadder(2);
+				System.out.println("You decide to look at the post it note, the colour is pink. \n"
 						+ "\n"
 						+ "'Hey guys, in regards to the disappearances in the park stay careful okay? \n"
 						+ "We’ve already had one of us disappear. \n"
@@ -528,6 +534,7 @@ public class cabin
 		int result = 4;
 		while (result != 3)
 			{
+			Spaceadder(2);
 				System.out.println("Enter '1' look around the bed. \n"
 						+ "Enter '2' for the post it note. \n"
 						+ "Enter '3' to look elsewhere. \n");
@@ -561,7 +568,7 @@ public class cabin
 	public static void bedside_table()
 	{
 		Spaceadder(2);
-		System.out.println("You decide to look at the bedside table,"
+		System.out.println("You decide to look at the bedside table, \n"
 				+ "which was at the rightside of the bed. \n"
 				+ "You find the desk lamb lighting up the majority of Cabin. \n"
 				+ "Other than that you find a post it note. \n"
@@ -571,17 +578,20 @@ public class cabin
 		int result = 4;
 		while (result != 3)
 		{
+			Spaceadder(2);
 			System.out.println("Enter '1' look at the bedside cabinet drawers. \n"
 					+ "Enter '2' for the post it note. \n"
 					+ "Enter '3' to look elsewhere. \n");
 			result = SelErrHandler(input);
 			if (result == 1)
 			{
+				Spaceadder(2);
 				System.out.println("You open the bed drawers. \n"
 						+ "But you find nothing of value. \n");
 			}
 			else if (result == 2)
 			{
+				Spaceadder(2);
 				System.out.println("You decide to look at the post it note, the colour is yellow. \n"
 						+ " \n"
 						+ "Hey guys! \n"
@@ -591,7 +601,7 @@ public class cabin
 						+ "It was a pleasure working with you all. \n"
 						+ "Sorry I couldn’t tell you all in person.\n"
 						+ "Love James \n."
-						+ "Behind the post it note was a number, '3'.");
+						+ "Behind the post it note was a number, '3'. \n");
 			}
 		}
 	}
@@ -607,7 +617,7 @@ public class cabin
 				+ "Its a smart way of people not leaching our bathroom. \n"
 				+ "Love Bonnie.' \n");
 		
-		 System.out.println("Enter in 'Continue'");
+		 System.out.println("Enter in 'Continue' \n");
 		 
 		 boolean checker = false;
 		 if (checker == false)
@@ -641,7 +651,7 @@ public class cabin
 			 		int answer = 0;
 			 		Spaceadder(2);
 			 		System.out.println("You attempt your luck at unlocking the door... \n"
-			 				+ "Enter the correct five number value, an example '123'... \n");
+			 				+ "Enter the correct three number value, an example '123'... \n");
 			 		answer = bathroomdoor(input);
 			 		if (answer == 1)
 			 		{
@@ -653,6 +663,7 @@ public class cabin
 			 		}
 			 		else if (answer == 2)
 			 		{
+			 			Spaceadder(2);
 			 			System.out.println("You try to apply the lock but it doesn't work... \n"
 			 					+ "You look elsewhere. \n");
 			 		}

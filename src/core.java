@@ -199,8 +199,8 @@ public class core
 		else if (input == 3)
 		{
 			System.out.println("You decide to head to the rustic car.\n");
-			rustic_car location_go = new rustic_car();
-			location_go.rustic_car();
+			rustic_truck location_go = new rustic_truck();
+			location_go.rustic_truck();
 		}
 	}
 	public static void inventorycheck()
