@@ -128,7 +128,10 @@ public class cabin
 				{
 					checker = true;
 				}
-				
+				else
+				{
+					System.out.println("Please enter a singular valid interger from '1' to '7'. \n");
+				}
 			}
 		}
 		
