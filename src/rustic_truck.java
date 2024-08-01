@@ -3,6 +3,12 @@ import java.util.Scanner;
 
 public class rustic_truck
 {
+	/*
+	 *  Going to set some global variables to be used between the generator methods...	
+	 *  These are apparently called class variables.
+	 */
+	static int gen_A_volt = 0,gen_B_volt = 0, gen_C_volt = 10;
+	
 	public void rustic_truck()
 	{
 		Spaceadder(10);
@@ -24,6 +30,7 @@ public class rustic_truck
 		Scanner input = new Scanner(System.in);
 		
 		boolean checker = false;
+		
 		
 		
 		System.out.println("Type in 'Continue' \n");
@@ -180,16 +187,8 @@ public class rustic_truck
 	}
 	public static void generator_C()
 	{
-		
-	}
-	public static void garage()
-	{
-		
-	}
-	public static void generator_A()
-	{
-		int gen_Vol = 10;
-		int gen_knob = 2;
+		int gen_exciter = 2;
+		int gen_knob = 1;
 		boolean checker = false;
 		Scanner input = new Scanner(System.in);
 		Spaceadder(2);
@@ -209,11 +208,108 @@ public class rustic_truck
 		
 		while (checker == false)
 		{
+			int result, count;
 			Spaceadder(2);
 			System.out.println("What do you choose to do? \n"
 					+ "Enter '1' to change the knob. \n"
 					+ "Enter '2' to head back. \n");
-			
+			result = SelErrHandler(input);
+			if (result == 1)
+			{
+				count = 1;
+				while (count == 1)
+				{
+					Spaceadder(2);
+					System.out.println("The current knob is at " + gen_knob + ". \n"
+							+ "What number do you turn the knob too? \n"
+							+ "Enter a value ranging from '0' to '9'. \n");
+					
+					gen_knob = knob_dialler(input);
+					if (gen_knob == -1)
+					{
+						System.out.println("You provided an incorrect value, \n"
+								+ "Please provide a correct value ranging from '0' to '9'. \n");
+					}
+					else
+					{
+						Spaceadder(2);
+						System.out.println("You've turned the knob to " + gen_knob + ". \n");
+						gen_C_volt = gen_exciter*gen_knob;
+						System.out.println(gen_C_volt);
+						count = 0;
+					}
+				}
+			}
+			else if (result == 2)
+			{
+				checker = true;
+			}
+		}
+	}
+	public static void garage()
+	{
+		
+	}
+	public static void generator_A()
+	{ // Yes i am going to be a lil lazy and copy the code for each segment instead of rewriting it...
+		// Customisation comes later!
+		int gen_exciter = 5;
+		int gen_knob = 0;
+		boolean checker = false;
+		Scanner input = new Scanner(System.in);
+		Spaceadder(2);
+		System.out.println("You approach the generator beside the hidden garage. \n"
+				+ "It looked fairly ancient and run down, \n"
+				+ "the labelling of it clearly ripped off. \n"
+				+ "You do spot a control panel among it, "
+				+ "although the panel sadly is cracked not showcasing anything. \n"
+				+ "The only thing noteworthy is a knob you could turn, it was currently left at '2'. \n");
+		
+		System.out.println("Type in 'Continue'");
+		while (checker == false)
+		{
+			checker = LocErrHandler(input);
+		}
+		checker = false;
+		
+		while (checker == false)
+		{
+			int result, count;
+			Spaceadder(2);
+			System.out.println("What do you choose to do? \n"
+					+ "Enter '1' to change the knob. \n"
+					+ "Enter '2' to head back. \n");
+			result = SelErrHandler(input);
+			if (result == 1)
+			{
+				count = 1;
+				while (count == 1)
+				{
+					Spaceadder(2);
+					System.out.println("The current knob is at " + gen_knob + ". \n"
+							+ "What number do you turn the knob too? \n"
+							+ "Enter a value ranging from '0' to '9'. \n");
+					
+					gen_knob = knob_dialler(input);
+					if (gen_knob == -1)
+					{
+						System.out.println("You provided an incorrect value, \n"
+								+ "Please provide a correct value ranging from '0' to '9'. \n");
+					}
+					else
+					{
+						Spaceadder(2);
+						System.out.println("You've turned the knob to " + gen_knob + ". \n");
+						gen_A_volt = gen_exciter*gen_knob;
+						System.out.println(gen_A_volt);
+						count = 0;
+					}
+				}
+			}
+			else if (result == 2)
+			{
+				checker = true;
+			}
 		}
 		
 	}
@@ -249,7 +345,119 @@ public class rustic_truck
 	}
 	public static void generator_B()
 	{
+		int gen_exciter = 9;
+		int gen_knob = 5;
+		boolean checker = false;
+		Scanner input = new Scanner(System.in);
+		Spaceadder(2);
+		System.out.println("You approach the generator beside the hidden garage. \n"
+				+ "It looked fairly ancient and run down, \n"
+				+ "the labelling of it clearly ripped off. \n"
+				+ "You do spot a control panel among it, "
+				+ "although the panel sadly is cracked not showcasing anything. \n"
+				+ "The only thing noteworthy is a knob you could turn, it was currently left at '2'. \n");
 		
+		System.out.println("Type in 'Continue'");
+		while (checker == false)
+		{
+			checker = LocErrHandler(input);
+		}
+		checker = false;
+		
+		while (checker == false)
+		{
+			int result, count;
+			Spaceadder(2);
+			System.out.println("What do you choose to do? \n"
+					+ "Enter '1' to change the knob. \n"
+					+ "Enter '2' to head back. \n");
+			result = SelErrHandler(input);
+			if (result == 1)
+			{
+				count = 1;
+				while (count == 1)
+				{
+					Spaceadder(2);
+					System.out.println("The current knob is at " + gen_knob + ". \n"
+							+ "What number do you turn the knob too? \n"
+							+ "Enter a value ranging from '0' to '9'. \n");
+					
+					gen_knob = knob_dialler(input);
+					if (gen_knob == -1)
+					{
+						System.out.println("You provided an incorrect value, \n"
+								+ "Please provide a correct value ranging from '0' to '9'. \n");
+					}
+					else
+					{
+						Spaceadder(2);
+						System.out.println("You've turned the knob to " + gen_knob + ". \n");
+						gen_B_volt = gen_exciter*gen_knob;
+						System.out.println(gen_B_volt);
+						count = 0;
+					}
+				}
+			}
+			else if (result == 2)
+			{
+				checker = true;
+			}
+		}
+	}
+	public static int knob_dialler(Scanner input)
+	{ 
+		// It looks long, but its just to convert & verify the value is indeed correct for the knob
+		String outcome;
+		try
+		{
+			outcome = input.nextLine();
+			if (outcome.equals("0"))
+			{
+				return 0;
+			}
+			else if (outcome.equals("1"))
+			{
+				return 1;
+			}
+			else if (outcome.equals("2"))
+			{
+				return 2;
+			}
+			else if (outcome.equals("3"))
+			{
+				return 3;
+			}
+			else if (outcome.equals("4"))
+			{
+				return 4;
+			}
+			else if (outcome.equals("5"))
+			{
+				return 5;
+			}
+			else if (outcome.equals("6"))
+			{
+				return 6;
+			}
+			else if (outcome.equals("7"))
+			{
+				return 7;
+			}
+			else if (outcome.equals("8"))
+			{
+				return 8;
+			}
+			else if (outcome.equals("9"))
+			{
+				return 9;
+			}
+		}
+		catch (Exception e)
+		{
+			System.out.println("Please enter a valid response in letters...");
+			System.out.println("'Enter' OR 'Exit' for their following actions");
+		}
+		return -1;
 	}
 }	
 
