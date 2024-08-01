@@ -297,7 +297,7 @@ public class cabin
 						+ "... \n"
 						+ "You grab the gun with you. It has two rounds left inside of it. \n");
 				
-				inv.setgun(true);
+				inv.setcarkey(true);
 				return 3;
 			}
 			else if (combination.equals("0"))
@@ -660,9 +660,9 @@ public class cabin
 			 		{
 			 			Spaceadder(2);
 			 			System.out.println("You manage to get inside the bathroom door. \n"
-			 					+ "Inside, you find a normal bathroom but to the right is a fuel canister. \n"
-			 					+ "You attempt to pick it up, and you fill it still being full. \n"
-			 					+ "Part of you thinks this might be useful. \n");
+			 					+ "Inside, you find a normal bathroom but on the sink is a set of car keys. \n"
+			 					+ "You take them. \n"
+			 					+ "Hoping that they may help you out. \n");
 			 		}
 			 		else if (answer == 2)
 			 		{

@@ -7,7 +7,7 @@ public class rustic_truck
 	 *  Going to set some global variables to be used between the generator methods...	
 	 *  These are apparently called class variables.
 	 */
-	static int gen_A_volt = 0,gen_B_volt = 0, gen_C_volt = 10;
+	static int gen_A_volt = 0,gen_B_volt = 45, gen_C_volt = 2, gen_switch = 0, gen_knob_A = 0, gen_knob_B = 0, gen_knob_C;
 	
 	public void rustic_truck()
 	{
@@ -183,21 +183,170 @@ public class rustic_truck
 	}
 	public static void truck()
 	{
+		inventory inv = inventory.getInstance();
+		boolean checker = false, dobchecker = false;
+		Scanner input = new Scanner(System.in);
+		int result;
+		Spaceadder(2);
+		System.out.println("You approach the truck, \n"
+				+ "It held its frame but segments were rusted, \n"
+				+ "almost like as though it had been abandoned. \n"
+				+ "You walk around it in an attempt to look inside, \n"
+				+ "Theres nothing much but a couple of empty boxes except for a book. \n"
+				+ "On the cover, it said 'Generator manual'. \n");
+		
+		System.out.println("Type in 'Continue'");
+		while (checker == false)
+		{
+			checker = LocErrHandler(input);
+		}
+		checker = false;
+		while (checker == false)
+		{
+			
+			Spaceadder(2);
+			System.out.println("What do you choose to do? \n"
+					+ "Enter '1' to go in the car. \n"
+					+ "Enter '2' to head back. \n");
+			result = SelErrHandler(input);
+			
+			if (result == 1)
+			{
+				if (inv.getcarkey() == true)
+				{
+					System.out.println("You use the car keys you've found in the Kabin. \n"
+							+ "Thankfully it clicks and lets you in. \n"
+							+ "Once settled in the car, you take a good deep long breath. \n"
+							+ "You could feel hope bubbling in you in the opportunity to leave here. \n");
+					
+					System.out.println("Type in 'Continue'");
+					while (dobchecker == false)
+					{
+						dobchecker = LocErrHandler(input);
+					}
+					dobchecker = false;
+					
+					while (dobchecker == false)
+					{
+						System.out.println("What do you choose to do? \n"
+								+ "Enter '1' to start the car \n"
+								+ "Enter '2' to read the generator's manual. \n"
+								+ "Enter '3' to head back. \n");
+						result = TruckErrHandler(input);
+						if (result == 1)
+						{
+							if (inv.getcarfuel() == true)
+							{
+								System.out.println("Before you start the car again, you remember the fuel you have. \n"
+										+ "You waste no extra seconds and add the fuel within the truck. \n"
+										+ "It gulps it up, finally satiated its first. \n"
+										+ "One done, you make it back in and attempt to start the car. \n"
+										+ "It turns on. \n"
+										+ "You drive through the path... \n");
+								ending finale = new ending();
+								finale.EndGame(); // Finally making the final part of the game.
+							}
+							else if (inv.getcarfuel() == false)
+							{
+								System.out.println("You turn the key on the car. \n"
+										+ "But the engine doesn't start, \n"
+										+ "you then notice that the car is missing fuel. \n"
+										+ "With its tank empy, \n"
+										+ "You'll have to find another source of fuel. \n");
+							}
+						}
+						else if (result == 2)
+						{
+							System.out.println("You head to the back of the car to reach out for the manual. \n"
+									+ "It was covered in a layer of dust which you blew away. \n"
+									+ "You open its contents. \n");
+							
+							System.out.println("Type in 'Continue'");
+							boolean trichecker = false;
+							while (trichecker == false)
+							{
+								trichecker = LocErrHandler(input);
+							}
+							trichecker = false;
+							
+							Spaceadder(2);
+							System.out.println("--1894 - GENERATOR CATALYST GUIDE V2-- \n"
+									+ "\n"
+									+ "The location currently houses three generators. \n"
+									+ "\n"
+									+ "These generators can power a number of objects within the vicinity. \n"
+									+ "\n"
+									+ "Although most have been replaced over the year due to funding. \n"
+									+ "\n"
+									+ "These generators are also in relatively bad shape and have different exciter iterators. \n"
+									+ "\n"
+									+ "As an external mechanice I don't know how these were operated but I've pinpointed some things. \n"
+									+ "\n"
+									+ "The only thing operable for the generators is the garage door used to store supplies. \n"
+									+ "\n"
+									+ "It requires a nominal amoung of 100 Volts to operate, although only specifically this amount. \n"
+									+ "\n"
+									+ "Otherwise the garage door wouldn't operate, its a little old in that sense. \n"
+									+ "\n"
+									+ "We have the following three generators, Generator A, B. C. \n"
+									+ "\n"
+									+ "Generator A excitor is tuned at five. \n"
+									+ "Turn the knob to increase the Volt via the iteration of the excitor \n"
+									+ "\n"
+									+ "Generator B excitor is tuned at nine. "
+									+ "Turn the knob to increase the Volt via the iteration of the excitor \n"
+									+ "\n"
+									+ "Generator C excitor is tuned at two. "
+									+ "Turn the knob to increase the Volt via the iteration of the excitor \n"
+									+ "\n"
+									+ "I've left it at a default setting, \n"
+									+ "if a generator is not at it the green light for it will turn off by the knife switch. \n"
+									+ "The default setting should equal to a 100 Volts, \n"
+									+ "so on the random chance its not just check the generator label and change it accordingly. \n");
+							
+							
+							System.out.println("Type in 'Continue'");
+							while (trichecker == false)
+							{
+								trichecker = LocErrHandler(input);
+							}
+							trichecker = false;
+						}
+						else if (result == 3)
+						{
+							dobchecker = true;
+						}
+						else if (result == 0)
+						{
+							System.out.println("Please an integer and not any other character. \n"
+									+ "'1' or '2' or '3' are your valid choices. \n");
+						}
+
+					}
+	
+				}
+			}
+			else if (result == 2)
+			{
+				checker = true;
+			}
+		}
+		
 		
 	}
 	public static void generator_C()
 	{
 		int gen_exciter = 2;
-		int gen_knob = 1;
+		//int gen_knob = 1;
 		boolean checker = false;
 		Scanner input = new Scanner(System.in);
 		Spaceadder(2);
-		System.out.println("You approach the generator beside the hidden garage. \n"
+		System.out.println("You approach the generator in front of the car. \n"
 				+ "It looked fairly ancient and run down, \n"
 				+ "the labelling of it clearly ripped off. \n"
 				+ "You do spot a control panel among it, "
 				+ "although the panel sadly is cracked not showcasing anything. \n"
-				+ "The only thing noteworthy is a knob you could turn, it was currently left at '2'. \n");
+				+ "The only thing noteworthy is a knob you could turn, it was currently left at '"+ gen_knob_C + "'. \n");
 		
 		System.out.println("Type in 'Continue'");
 		while (checker == false)
@@ -220,12 +369,12 @@ public class rustic_truck
 				while (count == 1)
 				{
 					Spaceadder(2);
-					System.out.println("The current knob is at " + gen_knob + ". \n"
+					System.out.println("The current knob is at " + gen_knob_C + ". \n"
 							+ "What number do you turn the knob too? \n"
 							+ "Enter a value ranging from '0' to '9'. \n");
 					
-					gen_knob = knob_dialler(input);
-					if (gen_knob == -1)
+					gen_knob_C = knob_dialler(input);
+					if (gen_knob_C == -1)
 					{
 						System.out.println("You provided an incorrect value, \n"
 								+ "Please provide a correct value ranging from '0' to '9'. \n");
@@ -233,8 +382,8 @@ public class rustic_truck
 					else
 					{
 						Spaceadder(2);
-						System.out.println("You've turned the knob to " + gen_knob + ". \n");
-						gen_C_volt = gen_exciter*gen_knob;
+						System.out.println("You've turned the knob to " + gen_knob_C + ". \n");
+						gen_C_volt = gen_exciter*gen_knob_C;
 						System.out.println(gen_C_volt);
 						count = 0;
 					}
@@ -248,13 +397,41 @@ public class rustic_truck
 	}
 	public static void garage()
 	{
+		inventory inv = inventory.getInstance();
+		boolean checker = false;
+		Scanner input = new Scanner(System.in);
+		if (gen_switch == 0)
+		{
+			Spaceadder(2);
+			System.out.println("You approach the garage, \n"
+					+ "it was locked with the garage door preventing you from getting in. \n"
+					+ "There wasn't much");
+		}
+		else if (gen_switch == 1)
+		{
+			Spaceadder(2);
+			System.out.println("When approaching the garage you notice the scale of it was smaller than expected. \n"
+					+ "You found tons of different equipment here and there and posters, \n"
+					+ "although the only notable thing you did find was a full fuel canister. \n"
+					+ "You take it with you. \n");
+			
+			inv.setcarfuel(true);
+			
+			System.out.println("Type in 'Continue' \n");
+			while (checker == false)
+			{
+				checker = LocErrHandler(input);
+			}
+			checker = false;	
+		
+		}
 		
 	}
 	public static void generator_A()
 	{ // Yes i am going to be a lil lazy and copy the code for each segment instead of rewriting it...
 		// Customisation comes later!
 		int gen_exciter = 5;
-		int gen_knob = 0;
+		//int gen_knob = 0;
 		boolean checker = false;
 		Scanner input = new Scanner(System.in);
 		Spaceadder(2);
@@ -263,7 +440,7 @@ public class rustic_truck
 				+ "the labelling of it clearly ripped off. \n"
 				+ "You do spot a control panel among it, "
 				+ "although the panel sadly is cracked not showcasing anything. \n"
-				+ "The only thing noteworthy is a knob you could turn, it was currently left at '2'. \n");
+				+ "The only thing noteworthy is a knob you could turn, it was currently left at '"+ gen_knob_A + "'. \n");
 		
 		System.out.println("Type in 'Continue'");
 		while (checker == false)
@@ -286,12 +463,12 @@ public class rustic_truck
 				while (count == 1)
 				{
 					Spaceadder(2);
-					System.out.println("The current knob is at " + gen_knob + ". \n"
+					System.out.println("The current knob is at " + gen_knob_A + ". \n"
 							+ "What number do you turn the knob too? \n"
 							+ "Enter a value ranging from '0' to '9'. \n");
 					
-					gen_knob = knob_dialler(input);
-					if (gen_knob == -1)
+					gen_knob_A = knob_dialler(input);
+					if (gen_knob_A == -1)
 					{
 						System.out.println("You provided an incorrect value, \n"
 								+ "Please provide a correct value ranging from '0' to '9'. \n");
@@ -299,8 +476,8 @@ public class rustic_truck
 					else
 					{
 						Spaceadder(2);
-						System.out.println("You've turned the knob to " + gen_knob + ". \n");
-						gen_A_volt = gen_exciter*gen_knob;
+						System.out.println("You've turned the knob to " + gen_knob_A + ". \n");
+						gen_A_volt = gen_exciter*gen_knob_A;
 						System.out.println(gen_A_volt);
 						count = 0;
 					}
@@ -315,6 +492,83 @@ public class rustic_truck
 	}
 	public static void generator_switch()
 	{
+		
+		int cor_gen_count = 0, result;
+		
+		// The amount of volts the generators produce collectively.
+		int total_volt = gen_A_volt + gen_B_volt + gen_C_volt;
+		if (gen_A_volt == 35)
+		{
+			cor_gen_count = cor_gen_count + 1;
+		}
+		if (gen_B_volt == 63)
+		{
+			cor_gen_count = cor_gen_count + 1;
+		}
+		if (gen_C_volt == 2)
+		{
+			cor_gen_count = cor_gen_count + 1;
+		}
+		
+		boolean checker = false;
+		Scanner input = new Scanner(System.in);
+		Spaceadder(2);
+		System.out.println("You approach the podium. \n"
+				+ "Now you are able to get a better look at it. \n"
+				+ "There appeared to be a massive switch, "
+				+ "below it, there seemed to be three green lights that were off. \n"
+				+ "There wasn't much really around it, "
+				+ "beside the massive knife switch in front of you. \n");
+		
+		System.out.println("Type in 'Coninue'");
+		while (checker == false)
+		{
+			checker = LocErrHandler(input);
+		}
+		checker = false;
+	
+		while (checker == false)
+		{
+			Spaceadder(2);
+			System.out.println("What do you choose to do? \n"
+					+ "Enter '1' to flip the knife switch. \n"
+					+ "Enter '2' to head back. \n");
+			result = SelErrHandler(input);
+			if (result == 1)
+			{
+				Spaceadder(2);
+				System.out.println("You approach the knife switch, \n"
+						+ "You feel this odd sense of excitement like something big is going to happen. \n"
+						+ "You take a deep breath, and push it up with all your force. \n"
+						+ "Suddenly you hear the generators kickstart. \n"
+						+ "With the sound of power rushing to the switch... ");
+				if (total_volt == 100)
+				{
+					Spaceadder(2);
+					System.out.println("You hear the nearby garage make an odd sound. \n"
+							+ "As you look you notice it begin to drag itself up. \n"
+							+ "You smile with the confidence that you were able to make it open \n"
+							+ "Plus you notice all of the green lights turned on. \n");
+					gen_switch = 1;
+				}
+				else
+				{
+					Spaceadder(2);
+					System.out.println("You hear the sputter of power but it starts to die down. \n"
+							+ "With the generators turning back off. \n"
+							+ "You do notice that "+ cor_gen_count + " of the green lights are on. \n");
+				}
+			}
+			else if (result == 2)
+			{
+				checker = true;
+			}
+			else
+			{
+				System.out.println("Please provide in the correct integer between '1' or '2' \n");
+			}
+			
+		}
 		
 	}
 	public static int SelErrHandler(Scanner input)
@@ -346,16 +600,16 @@ public class rustic_truck
 	public static void generator_B()
 	{
 		int gen_exciter = 9;
-		int gen_knob = 5;
+		//int gen_knob = 5;
 		boolean checker = false;
 		Scanner input = new Scanner(System.in);
 		Spaceadder(2);
-		System.out.println("You approach the generator beside the hidden garage. \n"
+		System.out.println("You approach the generator across the path from the car. \n"
 				+ "It looked fairly ancient and run down, \n"
 				+ "the labelling of it clearly ripped off. \n"
 				+ "You do spot a control panel among it, "
 				+ "although the panel sadly is cracked not showcasing anything. \n"
-				+ "The only thing noteworthy is a knob you could turn, it was currently left at '2'. \n");
+				+ "The only thing noteworthy is a knob you could turn, it was currently left at '"+ gen_knob_B + "'. \n");
 		
 		System.out.println("Type in 'Continue'");
 		while (checker == false)
@@ -378,12 +632,12 @@ public class rustic_truck
 				while (count == 1)
 				{
 					Spaceadder(2);
-					System.out.println("The current knob is at " + gen_knob + ". \n"
+					System.out.println("The current knob is at " + gen_knob_B + ". \n"
 							+ "What number do you turn the knob too? \n"
 							+ "Enter a value ranging from '0' to '9'. \n");
 					
-					gen_knob = knob_dialler(input);
-					if (gen_knob == -1)
+					gen_knob_B = knob_dialler(input);
+					if (gen_knob_B == -1)
 					{
 						System.out.println("You provided an incorrect value, \n"
 								+ "Please provide a correct value ranging from '0' to '9'. \n");
@@ -391,8 +645,8 @@ public class rustic_truck
 					else
 					{
 						Spaceadder(2);
-						System.out.println("You've turned the knob to " + gen_knob + ". \n");
-						gen_B_volt = gen_exciter*gen_knob;
+						System.out.println("You've turned the knob to " + gen_knob_B + ". \n");
+						gen_B_volt = gen_exciter*gen_knob_B;
 						System.out.println(gen_B_volt);
 						count = 0;
 					}
@@ -459,5 +713,31 @@ public class rustic_truck
 		}
 		return -1;
 	}
+	public static int TruckErrHandler(Scanner input)
+	{
+		String outcome;
+		try
+		{
+			outcome = input.nextLine();
+			if (outcome.equals("1"))
+			{
+				return 1;
+			}
+			else if (outcome.equals("2"))
+			{
+				return 2;
+			}
+			else if (outcome.equals("3"))
+			{
+				return 3;
+			}
+		}
+		catch (Exception e)
+		{
+			System.out.println("Please an integer and not any other character. \n");
+			System.out.println("'1' or '2' or '3' are your valid choices. \n");
+		}
+		
+		return 0;
+	}
 }	
-
