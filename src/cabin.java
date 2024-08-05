@@ -227,7 +227,7 @@ public class cabin
 			String result = input.nextLine();
 			if (result.equals("007"))
 			{
-				inv.setcarfuel(true);
+				inv.setcarkey(true);
 				return 1;
 			}
 			else
