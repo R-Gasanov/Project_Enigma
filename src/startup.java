@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Run this class to start the game...
 
 public class startup 
 {
