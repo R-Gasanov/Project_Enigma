@@ -138,6 +138,193 @@ public class ending
 			
 			if (fincheck == 1)
 			{
+				Spaceadder(2);
+				System.out.println("You don't hesitate and take a shot at his leg. \n"
+						+ "It hits but just barely grazes him, \n"
+						+ "he groans, with shock plastered over his face. \n"
+						+ "'Oh ho ho ho, you shouldn't have done that.' \n"
+						+ "His face alters to this somewhat manic smile. \n"
+						+ "'Arran, I'm sorry it had to come to this.' \n"
+						+ "He dashed straight for you, \n"
+						+ "With between you shortening you scramble to get your rifle ready. \n"
+						+ "You take another shot. \n");
+				
+				System.out.println("Type in 'Continue \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("It goes straight through his leg. \n"
+						+ "His groan was stronger,"
+						+ "and just as he closed to gap to a couple of meters he fell short falling down. \n"
+						+ "'D-dammit Arran! Y-you just had to get in the way! \n"
+						+ "Crap that hurts!' \n"
+						+ "He clenches his leg, the blood soaking his trousers. \n"
+						+ "You took a step back, letting the situation sink in. \n"
+						+ "You have no memories of who you are, there's been a serial killer and you just shot a man. \n"
+						+ "'What are you doing just standing there... are you going to leave me here?' \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("'N-no. You're coming with me.' \n"
+						+ "You left him there and went straight back to the truck. \n"
+						+ "As much as you wanted to just drive and leave him there, \n"
+						+ "You didn't want to leave any chance for him to somehow escape. \n"
+						+ "You grap a couple of ropes in one of the boxes in the back heading straight for him. \n"
+						+ "The bleeding didn't stop and he was beggining to look pale. \n"
+						+ "'Are you kidding me? I don't think I can do muc-' \n"
+						+ "You wack him on the head with the back of the gun, knocking him out. \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("With him talking less you tie him securely up. \n"
+						+ "Dragging him back to the truck. \n"
+						+ "Despite you crashing it wasn't the worst kind. \n"
+						+ "With a couple attempts at the truck the engine reignites. \n"
+						+ "Reversing you find yourself back on the road quickening your pace. \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("You continue on, the anxiety kicking in. \n"
+						+ "Finally, \n"
+						+ "after what felt like a lifetime you find yourself with signs of life. \n"
+						+ "You spot a random pedestrian, by the pavement. \n"
+						+ "You stop your car nearby, \n"
+						+ "and roll down the window asking for directions to the polic station. \n"
+						+ "He gives you them, thankfully not far. You thank him. \n"
+						+ "You drive off, just noticing his surprised expression when he looks at Bryce unconscious. \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("You made it, and just as you get out. \n"
+						+ "Multiple police officers and enforcers point their guns at you. \n"
+						+ "'PUT YOUR HANDS UP!' You do so. \n"
+						+ "But instead of panicking, you let out a sigh of relief. \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("'6 hours later.' \n"
+						+ "Your eyes felt drousy, the medic gave you an all clear. \n"
+						+ "She'd told me that I had supposedly experience some sort of concussion. \n"
+						+ "But that didn't matter, right now you were safe. \n"
+						+ "The doors opened from the polic precint entrance and there she came. \n"
+						+ "'A-arran? Oh Irene you really are here!' \n"
+						+ "She runs up to you and hugs you tightly, tears pouring out her eyes. \n"
+						+ "'U-uh... F-fiona? Is that you?' \n"
+						+ "\n"
+						+ "'Of course it is silly! \n"
+						+ "The one and only. \n"
+						+ "The best conservationist in all of Britannia.' \n"
+						+ "You look at her, \n"
+						+ "something about her was familiar. Warming in a way. \n"
+						+ "You could feel a tear coming down your eye. \n"
+						+ "'I-is everything alright Arran?'");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("The medic told her of my amnesia. \n"
+						+ "That I must've been hit on the head with something hard. \n"
+						+ "'I-I-I remember you, not exactly but I can feel it.' \n"
+						+ "She looked back in you. \n"
+						+ "Sharing a beautiful sheepish smile. \n"
+						+ "Her wavy ginger hair messy from the day's troubles illuminated her green eyes. \n"
+						+ "I hugged her, it felt right. \n"
+						+ "My own tears started to roll off her shoulder. \n"
+						+ "'I'm glad your safe, Fiona.' \n"
+						+ "We stayed like that, for a long time. \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("'3 months later.' \n"
+						+ "My memories had began to return. \n"
+						+ "It was weird, almost like a fog was slowly lifting itself. \n"
+						+ "Bryce was apprehended put on trial and taken away by the authorities. \n"
+						+ "A full thorough investigation happened throughout Cairngorms National Park. \n"
+						+ "They founded the 4 missing people, 3 of the missing citizens and the former employee. \n"
+						+ "Caitlyn, you remembered her. She was young, bright and passonate. \n"
+						+ "She wanted to travel all across Europa and visit all the places. \n"
+						+ "They were found in the lochs, as his paintings suggest which he painted dozens of them. \n"
+						+ "Drowning in the lochs. \n"
+						+ "'Bonnie, how are you holding up today?' Fiona said, surprising her with our presence. \n"
+						+ "'Could be better, can't wait to get out of here.' \n"
+						+ "'Yeah... just a little longer the doctor said right?' I asked. \n"
+						+ "'A week extra to just make sure, the fall was bad, but not bad enough to take me down.' \n"
+						+ "'How about you Arran? Your memories are slowly coming back right?' \n"
+						+ "'Yeah, still hazy at times but its getting there.' \n"
+						+ "'Slowly but surely yeah... What are you guys going to do after this?' \n"
+						+ "'I'll be staying in town with my grandmother, find out more about my abilites. \n"
+						+ "What about you, Fiona?' Said Bonnie. \n"
+						+ "'Theres still a need for a conservationist at the park. \n"
+						+ "Since things are beggining to settle donw, I might stay and continue my line of work. \n"
+						+ "And you, Arran?' \n"
+						+ "You take a deep long breath, thinking about it. \n"
+						+ "You already knew what you wanted to be."
+						+ "It was just a matter of taking the first step in being so. \n"
+						+ "'I wanna be a detective. \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("True Ending. \n");
 				
 			}
 			else if (fincheck == 2)
@@ -203,5 +390,4 @@ public class ending
 		}
 		return -1;
 	}
-
 }

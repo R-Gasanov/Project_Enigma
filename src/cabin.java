@@ -297,7 +297,8 @@ public class cabin
 						+ "... \n"
 						+ "You grab the gun with you. It has two rounds left inside of it. \n");
 				
-				inv.setcarkey(true);
+				inv.setgun(true);
+				inv.setpostitnote(true);
 				return 3;
 			}
 			else if (combination.equals("0"))
@@ -431,7 +432,7 @@ public class cabin
 				System.out.println("You decide to look at the post it note, the colour is green. \n"
 						+ "\n"
 						+ "'Fiona, sorry for using one of these. \n"
-						+ "But I don’t have any means of contacting you right away. "
+						+ "But I don’t have any means of contacting you right away. \n"
 						+ "Andrew, the shipment guy has brought you the thing you were waiting for. \n"
 						+ "Its the wired nest box camera you wanted. Its in the cabinet.\n"
 						+ "Bryce.' \n"

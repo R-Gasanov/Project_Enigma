@@ -192,7 +192,9 @@ public class rustic_truck
 				+ "It held its frame but segments were rusted, \n"
 				+ "almost like as though it had been abandoned. \n"
 				+ "You walk around it in an attempt to look inside, \n"
-				+ "Theres nothing much but a couple of empty boxes except for a book. \n"
+				+ "Theres nothing much but a couple of boxes, \n"
+				+ "filled with various things like rope, blankets, \n"
+				+ "first aid kit, a flash light and a book. \n"
 				+ "On the cover, it said 'Generator manual'. \n");
 		
 		System.out.println("Type in 'Continue' \n");
@@ -243,6 +245,15 @@ public class rustic_truck
 										+ "One done, you make it back in and attempt to start the car. \n"
 										+ "It turns on. \n"
 										+ "You drive through the path... \n");
+								boolean fincheck = false;
+								
+								System.out.println("Type in 'Continue' \n");
+								while (fincheck == false)
+								{
+									fincheck = LocErrHandler(input);
+								}
+								fincheck = false;
+								
 								ending finale = new ending();
 								finale.EndGame(); // Finally making the final part of the game.
 							}

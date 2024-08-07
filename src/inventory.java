@@ -24,6 +24,7 @@ public class inventory
 		carkey = false; 
 		carfuel = false;
 		gun = false;
+		postitnote = false;
 	}
 	
 	// Below we are fetching the private inventory and expressing
@@ -45,7 +46,9 @@ public class inventory
 		note = false,
 		carkey = false,
 		carfuel = false,
-		gun = false;
+		gun = false,
+		postitnote = false;
+	
 		
 	
 	public boolean getrustycompass()
@@ -76,7 +79,10 @@ public class inventory
 	{
 		return gun;
 	}
-	
+	public boolean postitnote()
+	{
+		return postitnote;
+	}
 	// Now we will be making the setters to modify the variables for future uses
 	
 	// Now remember void, means it doesn't have to return anything thus called void
@@ -103,6 +109,10 @@ public class inventory
 	public void setgun(boolean gun)
 	{
 		this.gun = gun;
+	}
+	public void setpostitnote(boolean postitnote)
+	{
+		this.postitnote = postitnote;
 	}
 	
 	//As you can see above, we now have the setters.
