@@ -14,12 +14,12 @@ public class cabin
 		System.out.println("You make it the cabin, \n"
 				+ "It was unoccupied, above the entrance was a sign. \n"
 				+ "The words spelt 'KABIN'. \n"
-				+ "You wondered why on dear Irenes name would that have changed? \n"
+				+ "You wondered why on dear Irene's name would that have changed? \n"
 				+ "Then you started to wonder... who on earth is Irene? \n"
 				+ "Although the thought only continues to worsen your headache. \n"
-				+ "Instead you approach the door to the 'KABIN'. \n");
+				+ "Instead of thinking, you approach the door to the 'KABIN'. \n");
 		
-		System.out.println("Type in Continue \n");
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		
 		inventory inv = inventory.getInstance();
 		
@@ -37,12 +37,12 @@ public class cabin
 		if (inv.getkabinkey() == false)
 		{
 			Spaceadder(2);
-			System.out.println("You attempt to open it but the door was securely locked. \n"
-					+ "You look around but find nothing interersting to help you get in. \n"
+			System.out.println("You attempt to open it, but the door was securely locked. \n"
+					+ "You look around but find nothing interesting to help you get in. \n"
 					+ "It looks like you'll need to find a key somewhere. \n"
 					+ "You head back to your original location. \n");
 			
-			System.out.println("Type in Continue \n");
+			System.out.println("Type in 'Continue' or 'C'. \n");
 			
 			while (checker == false)
 			{
@@ -54,11 +54,11 @@ public class cabin
 		else if (inv.getkabinkey() == true)
 		{
 			Spaceadder(2);
-			System.out.println("You scramble through your pocket finding the key you found the lookout tower. \n"
+			System.out.println("You scramble through your pocket finding the key you found in the lookout tower. \n"
 					+ "In anticipation you put the key in the hole, hoping for it to open. \n"
 					+ "With a promising click, you open the door and head in. \n");
 			
-			System.out.println("Enter in Continue \n");
+			System.out.println("Type in 'Continue' or 'C'. \n");
 			
 			while (checker == false)
 			{
@@ -72,12 +72,12 @@ public class cabin
 					+ "You take haste and attempt to rebalance yourself. \n"
 					+ "Finally after it weakens again you get to look around. \n"
 					+ "It looked suprisingly cosy, \n"
-					+ "with post it notes stuck around everywhere and furniture that made it look like a bedroom. \n"
+					+ "with post it notes stuck around everywhere and furniture that gave it a sense of being a bedroom. \n"
 					+ "There was another room to your left as well too. Leading to the bathroom. \n"
 					+ "But wait... you haven't been here at all to know that? \n"
-					+ "But something in your mind tells you that this place is all to familiar. \n");
+					+ "Yet something in your mind tells you that this place is all to familiar. \n");
 			
-			System.out.println("Enter in Continue \n");
+			System.out.println("Type in 'Continue' or 'C'. \n");
 			
 			while (checker == false)
 			{
@@ -282,15 +282,16 @@ public class cabin
 				Spaceadder(2);
 				System.out.println("You hear a beep as the lock opens up. \n"
 						+ "You couldn't tell whether or not you were thrilled or scared at opening it. \n"
-						+ "You spare no time opening the cabinet. \n"
+						+ "But either way, you had to know what was inside. \n"
 						+ "In it, you find a gun and another post it note. \n"
 						+ "'Arran, if your reading this, I'm sorry. \n"
 						+ "Thank dear Irene that you were smart enough to figure it out, I knew you would! \n"
 						+ "I'm keeping Bonnie safe, \n"
-						+ "but he knows about us and he's trying to find anyone one of us before we escape out the park. \n"
+						+ "but he knows about us, and he's trying to find anyone one of us before we escape out the park. \n"
 						+ "I'm not good with a rifle but I remember you said you were a detective at some point. \n"
-						+ "Please, I'm stuck with Bonnie here too somewhere in the park. \n"
-						+ "Take the car, it does actually work. I've just told him it doesn't so it'll save us some time. \n"
+						+ "Please, I'm stuck with Bonnie here too somewhere in the park,\n"
+						+ "I can't risk writing it here to tell you. \n"
+						+ "Take the truck, it does actually work. I've just told him it doesn't so it'll save us some time. \n"
 						+ "Please, escape out of the park and contact the police! \n"
 						+ "\n"
 						+ "May Irene be with you... Fiona. \n"
@@ -309,7 +310,7 @@ public class cabin
 			{
 				Spaceadder(2);
 				System.out.println("You hear a hard beep. \n"
-						+ "You try and open the lock but its still bardged shut. \n"
+						+ "You try and open the lock but its still barged shut. \n"
 						+ "Looks like you'll need to to try another combination. \n");
 			}
 		}	
@@ -325,8 +326,8 @@ public class cabin
 		//boolean checker = false;
 		Spaceadder(2);
 		System.out.println("You approach the desk that was to the left of you. \n"
-				+ "It was accompanied with a little lantern with a candle that had died. \n"
-				+ "There was one last match stick left beside so you don't hesitate to light it up. \n"
+				+ "It was accompanied with a little lantern with a candle that was still stubbornly going. \n"
+				+ "Although it didn't have much life left in it. \n"
 				+ "Besides that, there were a couple of other things alongside it. \n"
 				+ "One being a post it note and another being a letter. \n"
 				+ "Which do you choose to look at? \n");
@@ -359,15 +360,15 @@ public class cabin
 						+ "\n"
 						+ "Especially with her talking about her visions. \n"
 						+ "\n"
-						+ "No doctor would believe her Clairvoyance.\n"
+						+ "No doctor would believe her clairvoyance.\n"
 						+ "\n"
-						+ "I’m glad you managed to make it inside, its safe in here. \n"
+						+ "I’m glad you managed to make it inside, its safe here. \n"
 						+ "\n"
 						+ "I’ve accidentally left the place in a bit of a mess too. \n"
 						+ "\n"
 						+ "You know me loving my post it notes. I’m always picky especially on the colouring. \n"
 						+ "\n"
-						+ "My favourites being Emerald and Calamime, I never liked the name of it being pink or green anyways. \n"
+						+ "My favourites being Emerald and Calamine, I never liked the name of it being pink or green anyways. \n"
 						+ "\n"
 						+ "I hope that helps, I’m sorry for leaving you there alone. \n"
 						+ "\n"
@@ -385,7 +386,7 @@ public class cabin
 						+ "'Psst Bonnie, \n"
 						+ "I’ve heard Duncan hired a new replacement already. \n"
 						+ "Pray to me they’re another girl. \n"
-						+ "The quantity of guys and girls here isn’t equal enough here, sorry lads! \n"
+						+ "The quantity of guys and girls isn’t equal enough here, sorry lads! \n"
 						+ "Fiona' \n"
 						+ "Behind the post it note was a number, '2'. \n");
 			}
@@ -411,20 +412,20 @@ public class cabin
 			if (result == 1 )
 			{
 				System.out.println("You decide to look at the multiple torn pieces of newspaper. \n"
-						+ "\n"
-						+ "Most of them were unreadable referencing weather pollution and new species descoveries. \n"
-						+ "Although the one thing that caught your eye was the supposed dissapearences. \n"
-						+ "It read. \n" // Felix Anderson is NOT the main character
-						+ "'Multiple dissaperances have been occuring in the national park. \n"
-						+ "Authorities are investigating whether or not this is linked to the dissaperance to one of the employees. \n"
-						+ "F----- -------- the local park ranger had gone missing six years ago. \n"
-						+ "Neither of the three missing individuals have been found, despite searches around the park. \n"
-						+ "The most popular theory is that they all drowned in one of the many lochs found at the park. \n"
-						+ "Although no evidence suggests this happened.' \n"
+						+ "\n" // System.out.println("Type in 'Continue' or 'C'. \n");
+						+ "Most of them were unreadable referencing weather pollution and new species discoveries. \n"
+						+ "Although the one thing that caught your eye was the supposed disappearances. \n"
+						+ "It read. \n" // Felix Anderson is NOT the main character -> Remember this!!!
+						+ "'Multiple disappearances have been occuring in the national park. \n"
+						+ "Authorities are investigating whether or not this is linked to the disappearance of a former employee. \n"
+						+ "F----- --------, the local park ranger that had gone missing six years ago. \n"
+						+ "Neither of the three missing individuals have been found, despite the searches around the park. \n"
+						+ "The most popular theory is that they all drowned in one of the many lochs found here. \n"
+						+ "Although no evidence suggests this had indeed happened.' \n"
 						+ "\n"
 						+ "Thats about all the torn paper had, you wonder why the name had been marked on over. \n"
 						+ "Beside it, another small paper pinned to the board had a number written. \n"
-						+ "'3+1' ARE NOW MISSING. \n"
+						+ "'3+1' AFTER THE PAPER ARE NOW MISSING. \n"
 						+ "You feel a chill run up your spine. \n");
 			}
 			else if (result == 2)
@@ -446,12 +447,12 @@ public class cabin
 	{
 		Spaceadder(2);
 		System.out.println("You make your way to the cabinet. \n"
-				+ "It was at the corner left of the room, looming over everything. \n"
-				+ "You notice a post it not strapped to one of its door. \n"
+				+ "It was at the left corner of the room, looming over everything. \n"
+				+ "You notice a post it note strapped to one of its door. \n"
 				+ "A five letter lock prevented you from opening the cabinet. \n"
 				+ "The only other thing you find is a package filled with post it notes. \n");
 		
-		System.out.println("Enter in 'Continue");
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		
 		Scanner input = new Scanner(System.in);
 		
@@ -469,14 +470,14 @@ public class cabin
 				+ "It looked like someone wrote something on it. \n"
 				+ "'Don't use unless you have my permission! \n"
 				+ "These are my well renowned post it notes. \n"
-				+ "And yes Arran even though it says pink and green on the package...\n"
-				+ "The Colours look more like Emerald and Calamime!' \n"
+				+ "And yes Arran, even though it says pink and green on the package...\n"
+				+ "The Colours look more like Emerald and Calamine!' \n"
 				+ "On the back it does say the colours, \n"
-				+ "Yet where it would say green and pink are marked out and replaced with Camamile and Emerald. \n"
+				+ "Yet where it would say green and pink are marked out and replaced with Calamine and Emerald. \n"
 				+ "... \n"
 				+ "What a strange person. \n");
 		
-		System.out.println("Enter in 'Continue");
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		
 		while (checker == false)
 		{
@@ -530,7 +531,7 @@ public class cabin
 		Spaceadder(2);
 		System.out.println("You decide to go and look at the bed. \n"
 				+ "It was to the far right of the room where there was a window covered with curtains. \n"
-				+ "There wasn't much to it, it had thick covered for warmth with a foresty design. \n"
+				+ "There wasn't much to it, it had a thick cover atop for warmth with a foresty design. \n"
 				+ "On top of it was a post it note. \n"
 				+ "What do you choose to look at? \n");
 		
@@ -573,10 +574,10 @@ public class cabin
 	{
 		Spaceadder(2);
 		System.out.println("You decide to look at the bedside table, \n"
-				+ "which was at the rightside of the bed. \n"
+				+ "which was at the right side of the bed. \n"
 				+ "You find the desk lamb lighting up the majority of Cabin. \n"
 				+ "Other than that you find a post it note. \n"
-				+ "What do you choose to look that. \n");
+				+ "What do you choose to look that? \n");
 		
 		Scanner input = new Scanner(System.in);
 		int result = 4;
@@ -590,7 +591,7 @@ public class cabin
 			if (result == 1)
 			{
 				Spaceadder(2);
-				System.out.println("You open the bed drawers. \n"
+				System.out.println("You open the bedside cabinet drawers. \n"
 						+ "But you find nothing of value. \n");
 			}
 			else if (result == 2)
@@ -614,14 +615,14 @@ public class cabin
 		Scanner input = new Scanner(System.in);
 		Spaceadder(2);
 		System.out.println("You decide to go to the bath room. \n"
-				+ "It was stationed directly on the left of the room. \n"
+				+ "It was stationed directly to the left of the room. \n"
 				+ "You attempt to open the door but of course theres another lock. \n"
 				+ "You then notice the label to the left side of the door stuck to the wall. \n"
 				+ "'Hey hey! The code is the current active number of people in our team. \n"
 				+ "Its a smart way of people not leaching our bathroom. \n"
 				+ "Love Bonnie.' \n");
 		
-		 System.out.println("Enter in 'Continue' \n");
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		 
 		 boolean checker = false;
 		 if (checker == false)
@@ -638,7 +639,7 @@ public class cabin
 			 {
 			 	
 			 	Spaceadder(2);
-			 	System.out.println("Enter '1' look back at the label on the wall. \n"
+			 	System.out.println("Enter '1' to look back at the label on the wall. \n"
 						+ "Enter '2' to try and unlock the door. \n"
 						+ "Enter '3' to look elsewhere. \n");
 			 	result = SelErrHandler(input);
@@ -655,7 +656,8 @@ public class cabin
 			 		int answer = 0;
 			 		Spaceadder(2);
 			 		System.out.println("You attempt your luck at unlocking the door... \n"
-			 				+ "Enter the correct three number value, an example '123'... \n");
+			 				+ "Enter the correct three number value,\n"
+			 				+ "ranging from '001' to '999'... \n");
 			 		answer = bathroomdoor(input);
 			 		if (answer == 1)
 			 		{
@@ -668,7 +670,7 @@ public class cabin
 			 		else if (answer == 2)
 			 		{
 			 			Spaceadder(2);
-			 			System.out.println("You try to apply the lock but it doesn't work... \n"
+			 			System.out.println("You try to enter the number to the lock but it doesn't work... \n"
 			 					+ "You look elsewhere. \n");
 			 		}
 			 	}

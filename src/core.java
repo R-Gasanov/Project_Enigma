@@ -17,15 +17,15 @@ public class core
 		System.out.println("Your head felt heavy.\n"
 				+ "As you begin to come back to your senses, you notice where you are.\n"
 				+ "Your in the middle of some woods."
-				+ "You get up from the dried crisp leaves that layed below you.\n"
+				+ "You get up from the dried layer of crispy leaves, patting yourself clean.\n"
 				+ "Wondering how you got here in the first place.\n"
 				+ "You tried to think back but you're met with the stabbing pain in your head.\n"
 				+ "Only to realise besides the pain, your mind is blank.\n"
 				+ "With no memories as to why you're here.\n"
-				+ "You try and dig around your pockets, only to find a rusty looking compass.\n"
-				+ "Or who you are.\n");
+				+ "You try and dig around your pockets, hoping for anything.\n"
+				+ "Only to find a rusty compass, and nothing to indicate as to who you are.\n");
 		
-		System.out.println("Type in Continue\n");
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		
 		int count = 0;
 		boolean checker = false;
@@ -40,28 +40,28 @@ public class core
 				checker = false;
 				count++;
 				Spaceadder(2);
-				System.out.println("With things looking dire.\n"
-						+"You try to calm yourself down.\n"
+				System.out.println("Panic settles in, realising the dire situation.\n"
+						+"You take deep breaths, hoping to calm yourself down.\n"
 						+"Thankfully the sharp pain in your head started to turn dull.\n"
 						+"With that out of the way for now, you're able to look around.\n");
 			}
 		}
 		while (count != 2)
 		{
-			System.out.println("Type in Continue\n");
+			System.out.println("Type in 'Continue' or 'C'. \n");
 			
 			checker = LocErrHandler(input);
 			if (checker == true)
 			{
 				checker = false;
 				Spaceadder(2);
-				System.out.println("To the north there was a lookout tower,\n"
+				System.out.println("To the north was a lookout tower,\n"
 						+"visible above the trees mounting to the northern hill.\n"
 						+"\n"
-						+"To the west, there were few trees,\n"
+						+"To the west, were a few trees,\n"
 						+"the only thing notable was what appeared to be an outline of a cabin.\n"
 						+"\n"
-						+"The last thing you notice is a path that leads south.\n"
+						+"The last thing you do notice is a path that leads south.\n"
 						+"Bending slightly between the trees.\n"
 						+"\n"
 						+"To the east was nothing but dense forest,\n"
@@ -73,11 +73,13 @@ public class core
 			}
 		}
 		while (count != 3)
-		{
+		{ // Here we have the choice to select for multiple different locations
 			System.out.println("Enter '1' for the Lookout Tower.\n"
 					+ "Enter '2' for the Cabin.\n"
-					+ "Enter '3' for the southern path.\n"
-					+ "Enter '4' to look at your inventory \n"
+					+ "Enter '3' for the Southern Path.\n"
+					+ "Enter '4' to look at your Inventory \n"
+					// Potentially implementing an inventory throughout the locations
+					// May come around in a 3.0 update.
 					);
 			
 			int intchecker = 5;
@@ -85,7 +87,7 @@ public class core
 			{
 				//input.nextLine();
 				intchecker = SelErrHandler(input);
-				System.out.println("This is the intchecker" + intchecker);
+				//System.out.println("This is the intchecker" + intchecker);
 			}
 			
 			// Below we are doing the inventory if its 4 or the location if its everything else
@@ -101,14 +103,18 @@ public class core
 
 		
 	}
-	public static boolean LocErrHandler(Scanner input)
+	public static boolean LocErrHandler(Scanner input) // UPDATED VERSION -> Don't forget to copy...
 	{ // Handlers string based inputs from the user
 		String outcome;
 		try
 		{
 			outcome = input.nextLine();
 			//System.out.println(outcome);
-			if (outcome.toLowerCase().equals("continue"))
+			
+			// New shortcut added with the c instead of having to constantly write c
+			// Now everyone can stop complaining that it takes too long to type continue...
+			// Боже мой...
+			if ((outcome.toLowerCase().equals("continue")) || (outcome.toLowerCase().equals("c")))
 			{
 				return true;
 			}
@@ -117,11 +123,12 @@ public class core
 			{
 				System.out.println("You've provided an incorrect string");
 				System.out.println("Please enter...");
-				System.out.println("'Continue' following actions");
+				System.out.println("'Continue' or 'C' for following actions...");
 			}
 		}
 		catch (Exception E)
 		{
+			// Yes I am too easy to change these lines of text...
 			System.out.println("Please enter a valid response in letters...");
 			System.out.println("'Enter' OR 'Exit' for their following actions");
 		}
@@ -185,19 +192,19 @@ public class core
 		// Here we are creating instances from other classes 
 		if (input == 1)
 		{
-			System.out.println("You decide to head to the lookout tower.\n");
+			System.out.println("You decide to head to the Lookout Tower.\n");
 			lookout_tower location_go = new lookout_tower();
 			location_go.lookout_tower();
 		}
 		else if (input == 2)
 		{
-			System.out.println("You decide to head to the cabin.\n");
+			System.out.println("You decide to head to the Cabin.\n");
 			cabin location_go = new cabin();
 			location_go.cabin();
 		}
 		else if (input == 3)
 		{
-			System.out.println("You decide to head to the rustic car.\n");
+			System.out.println("You decide to head to the Southern Path.\n");
 			rustic_truck location_go = new rustic_truck();
 			location_go.rustic_truck();
 		}
@@ -216,11 +223,11 @@ public class core
 		}
 		if (inv.getkabinkey() == true)
 		{
-			System.out.println("A key to the cabin. \n");
+			System.out.println("A key to the Cabin. \n");
 		}
 		if (inv.getnote() == true)
 		{
-			System.out.println("A note from the lookout tower. \n");
+			System.out.println("A note from the Lookout Tower. \n");
 		}
 		if (inv.getcarfuel() == true)
 		{
@@ -228,7 +235,7 @@ public class core
 		}
 		if (inv.getgun() == true)
 		{
-			System.out.println("A rifle with two bullets remaining.");
+			System.out.println("A rifle with two bullets remaining. \n");
 		}
 	}
 }

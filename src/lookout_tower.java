@@ -13,8 +13,8 @@ public class lookout_tower
 		
 		System.out.println("You make it the lookout tower, \n"
 				+ "It was clearly abondoned, \n"
-				+ "with vegtatation attempting to claim the pillars. \n"
-				+ "There was a set of rusty set of ladders that led to the top. \n"
+				+ "with vegetation sprouting out from the foundations. \n"
+				+ "There was a rusty ladder that led to the top. \n"
 				+ "It looked stable enough for you to climb.\n"
 				+ "Where do you choose to go? \n");
 		
@@ -40,10 +40,10 @@ public class lookout_tower
 			Spaceadder(2);
 			System.out.println("You begin to climb, \n"
 					+ "the ladder groaned at the pressure of your weight. \n"
-					+ "You could feel your heart beat and body tense the higher you went. \n"
-					+ "It was quite a way up but you knew you had little other options. \n");
+					+ "You could feel your heart beat and body tense the higher you went up. \n"
+					+ "It was quite a way, but you knew you had little other options. \n");
 			
-			System.out.println("Type in Continue\n");
+			System.out.println("Type in 'Continue' or 'C'. \n");
 			while (checker == false)
 			{
 				checker = LocErrHandler(input);
@@ -77,19 +77,19 @@ public class lookout_tower
 							+ "'Welcome to C--------- -----nal Park lookout tower! \n"
 							+ "Here you get to sight see and look at the wonderious views, \n"
 							+ "in which the highlands have to offer. \n"
-							+ "From here we can see three lochs amongst forest we're in. \n"
+							+ "From here we can see three lochs amongst the forest we're in. \n"
 							+ "The park has seen a--und two-hundred and eighty bird sp--ies too! \n"
-							+ "We eve- have --- of the hig---t mountain peaks in all of the --!' \n"
+							+ "We eve- have --- of the hig---t mountain peak in all of the --!' \n"
 							+ "Thats about as much as you could read from the poster itself. \n");
 				}
 				else if (count == 2)
-				{ // 32801 is the correct combination
-					if (lock == 0)
-					{
-						Spaceadder(2);
+				{ // 32801 is the correct combination -> if you're cheating, you're a loser...
+					if (lock == 0) // I've only wrote the answer here once behind the scenes
+					{ // So if you actually know java and can read this hunk of code to find the answers
+						Spaceadder(2); // Then fine, if not ha ha ha... HA!
 						System.out.println("You decide to look at the locked chest. \n"
-								+ "You of course try to open to no avail. \n"
-								+ "From further inspection though there appears to be a number pad. \n"
+								+ "You of course try to open it to no avail. \n"
+								+ "From further inspection though, there appears to be a number pad. \n"
 								+ "It had five rows with numbers ranging from zero to nine. \n"
 								+ "What do you choose to do? \n");
 						
@@ -134,10 +134,10 @@ public class lookout_tower
 					Spaceadder(2);
 					System.out.println("You decide to look at the view from the lookout tower. \n"
 							+ "Here you can see a large expanse of where you are, \n"
-							+ "in hopes of finding a way out. \n"
-							+ "Although, all you see is the continuation of wilderness endlessly. \n"
+							+ "you take in the landscape, hoping for a way out. \n"
+							+ "Although, all you can see is the continuation of wilderness endlessly. \n"
 							+ "With trees and hills stretching out for miles. \n"
-							+ "The only notable thing is you see is one large mountain peak from the view. \n");
+							+ "The only notable thing you see is one large mountain peak from the view. \n");
 				}
 				else if (count == 4)
 				{
@@ -268,7 +268,7 @@ public class lookout_tower
 				inv.setnote(true);
 				
 				
-				System.out.println("Type in Continue\n");
+				System.out.println("Type in 'Continue' or 'C'. \n");
 				
 				// Ensuring we are breaking everything into segments for the user 
 				
