@@ -111,7 +111,6 @@ public class core
 			if (outcome.toLowerCase().equals("continue"))
 			{
 				return true;
-				
 			}
 			
 			else

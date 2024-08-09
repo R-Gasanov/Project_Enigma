@@ -52,7 +52,76 @@ public class ending
 	}
 	public static void badending()
 	{
+		Scanner input = new Scanner(System.in);
+		boolean checker = false;
+		
 		Spaceadder(2);
+		System.out.println("But whatever it was I couldn't get it. \n"
+				+ "I couldn't help but be frustated... \n"
+				+ "But hopefully I'll get to see her and Bonnie in the hospital at least. \n"
+				+ "And that they're safe... \n"
+				+ "You find yourself zoning out until you see a silhouette in the street and swerve. \n");
+		
+		System.out.println("Type in 'Continue' \n");
+		
+		while (checker == false)
+		{
+			checker = LocErrHandler(input);
+		}
+		checker = false;
+		
+		Spaceadder(2);
+		System.out.println("You lose control and its not long before you go off road and crash into a tree. \n"
+				+ "The whiplash was brutal, \n"
+				+ "after a couple of seconds you begin to feel a dull ache in your abdomin. \n"
+				+ "You grunt at the pain,  \n"
+				+ "thankfully the crash wasn't too serious. \n"
+				+ "You heard footsteps approaching you. \n"
+				+ "'Finally, signs of human life...' \n"
+				+ "You await patiently for whoever to arrive. \n");
+		
+		System.out.println("Type in 'Continue' \n");
+		
+		while (checker == false)
+		{
+			checker = LocErrHandler(input);
+		}
+		checker = false;
+		
+		Spaceadder(2);
+		System.out.println("'Hey! You alright in there?' \n"
+				+ "You heard the man, he opened your door and grabbed you out. \n"
+				+ "'I-I think so?' the pain in the abdomin still prevelant. \n"
+				+ "'Arran! Its you! Thank Irene you're alright... \n"
+				+ "You look up at him, he was a tall build with dark short wavy hair. \n"
+				+ "'Lets get you up.' He picks you up and thats when you feel a sudden sting. \n");
+		
+		System.out.println("Type in 'Continue' \n");
+		
+		while (checker == false)
+		{
+			checker = LocErrHandler(input);
+		}
+		checker = false;
+		
+		Spaceadder(2);
+		System.out.println("I fall onto the ground. \n"
+				+ "The last thing I see was him standing over me with a syringe. \n"
+				+ "Then things turn black... \n"
+				+ "Forver... \n");
+		
+		System.out.println("Type in 'Continue' \n");
+		
+		while (checker == false)
+		{
+			checker = LocErrHandler(input);
+		}
+		checker = false;
+		
+		Spaceadder(2);
+		System.out.println("Bad Ending. \n");
+		System. exit(0);
+		
 	}
 	public static void goodending()
 	{
@@ -86,7 +155,7 @@ public class ending
 				+ "Unless... what if... \n"
 				+ "Your heart starts pounding. \n"
 				+ "Am I Bryce? \n"
-				+ "Before you let that thought truly sink in you see a silhouette in the street and swerve \n");
+				+ "Before you let that thought truly sink in you see a silhouette in the street and swerve. \n");
 		
 		System.out.println("Type in 'Continue' \n");
 		while (checker == false)
@@ -257,7 +326,7 @@ public class ending
 						+ "You look at her, \n"
 						+ "something about her was familiar. Warming in a way. \n"
 						+ "You could feel a tear coming down your eye. \n"
-						+ "'I-is everything alright Arran?'");
+						+ "'I-is everything alright Arran?' \n");
 				
 				System.out.println("Type in 'Continue' \n");
 				
@@ -278,6 +347,24 @@ public class ending
 						+ "My own tears started to roll off her shoulder. \n"
 						+ "'I'm glad your safe, Fiona.' \n"
 						+ "We stayed like that, for a long time. \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("There was one thing left in your mind wondering. \n"
+						+ "Something strange, but a question you wanted to resolving. \n"
+						+ "'Why is the cabin called the 'KABIN'?' \n"
+						+ "She chuckled, pausing her tears for a moment. \n"
+						+ "'Your mother spelt it with a K instead of a C since her english isn't the best. \n"
+						+ "The park commisoned her to do the design for the place. \n"
+						+ "'You almost completely forgot the fact that you even have a mother.' \n"
+						+ "Huh... you wonder to yourself, will you ever remember anyone else in your life? \n");
 				
 				System.out.println("Type in 'Continue' \n");
 				
@@ -313,7 +400,7 @@ public class ending
 						+ "You take a deep long breath, thinking about it. \n"
 						+ "You already knew what you wanted to be."
 						+ "It was just a matter of taking the first step in being so. \n"
-						+ "'I wanna be a detective. \n");
+						+ "'I wanna be a detective.' \n");
 				
 				System.out.println("Type in 'Continue' \n");
 				
@@ -325,10 +412,56 @@ public class ending
 				
 				Spaceadder(2);
 				System.out.println("True Ending. \n");
+				System. exit(0);
 				
 			}
 			else if (fincheck == 2)
 			{
+				Spaceadder(2);
+				System.out.println("You decide to put down the gun. \n"
+						+ "He releases a breath he was a breathing. \n"
+						+ "'Thank you Arran, I'm glad we're on the same page.' \n"
+						+ "He approaches me. \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("'Lets go find Bonnie and Fiona shall we?' \n"
+						+ " He embraces me for a hug. \n"
+						+ "'Together.' I felt a sudden sting on my neck. \n"
+						+ "I try to move but my body feels heavy, the headache resurfacing. \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("I fall onto the ground. \n"
+						+ "The last thing I see is Bryce standing over me with a syringe. \n"
+						+ "Then things turn black... \n"
+						+ "Forver... \n");
+				
+				System.out.println("Type in 'Continue' \n");
+				
+				while (checker == false)
+				{
+					checker = LocErrHandler(input);
+				}
+				checker = false;
+				
+				Spaceadder(2);
+				System.out.println("Bad Ending. \n");
+				System. exit(0);
 				
 			}
 		}
