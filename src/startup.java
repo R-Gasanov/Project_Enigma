@@ -7,7 +7,7 @@ public class startup
 	public static void main(String args[])
 	{
 		// Below we are displaying the version and a simple display of the game
-		System.out.println("-------------Version 0.0.0.1--------------");
+		System.out.println("-------------Version 0.0.3.0--------------");
 		System.out.println("------------------------------------------");
 		System.out.println("------Enigma Games presents... KABIN------");
 		System.out.println("------------------------------------------");

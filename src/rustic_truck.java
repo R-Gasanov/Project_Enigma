@@ -12,18 +12,18 @@ public class rustic_truck
 	public void rustic_truck()
 	{
 		Spaceadder(10);
-		System.out.println("-------------Version 0.0.0.1--------------");
+		System.out.println("-------------Version 0.0.3.0--------------");
 		System.out.println("------------------------------------------");
 		System.out.println("------Enigma Games presents... KABIN------");
 		System.out.println("------------------------------------------");
 		System.out.println("\n");
 		
 		System.out.println("You make your way through the path. \n"
-				+ "It doesn't take you long to find something else along the path. \n"
+				+ "It doesn't take you long to find something else along it. \n"
 				+ "You notice a truck, \n"
 				+ "its state looked questionable. \n"
 				+ "As you approach the truck you notice it more clearly. \n"
-				+ "It appeared to have writing on the side but it was barely readable... \n"
+				+ "It appeared to have writing on the side but just barely readable... \n"
 				+ "The only part you were able to make out was 'Park Ranger's Mobile'. \n"
 				+ "You notice that the truck wasn't the only thing here. \n");
 		
@@ -31,9 +31,8 @@ public class rustic_truck
 		
 		boolean checker = false;
 		
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		
-		
-		System.out.println("Type in 'Continue' \n");
 		while (checker == false)
 		{
 			checker = LocErrHandler(input);
@@ -42,25 +41,26 @@ public class rustic_truck
 		
 		Spaceadder(2);
 		System.out.println("You notice just passed the truck was what appeared to be a garage, \n"
-				+ "It almost appeared coming out of the ground, \n"
+				+ "As though it had ascended from the ground up, \n"
 				+ "making a small mound of green around the door. \n"
 				+ "Beside it looked like a podium with what appeared to be switch. \n"
-				+ "You take a good extra look around. \n"
-				+ "Managing to spot three other things, three generators scattered around. \n");
+				+ "You take a further good extra look around the area. \n"
+				+ "Managing to spot other things, with three generators scattered around. \n");
 		
-		System.out.println("Type in 'Continue' \n");
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		while (checker == false)
 		{
 			checker = LocErrHandler(input);
 		}
 		checker = false;
 		
-		System.out.println("You have this odd feeling that this truck might be your only escape. \n");
+		System.out.println("You have this odd feeling that this truck might be your only way of escape. \n");
 		
 		// Here we will be using the cabin location method, just rewriting it here for practice sake
 		while (checker == false)
 		{
 			int location = 0; 
+			Spaceadder(2);
 			System.out.println("Where do you choose to look at? \n"
 					+ "Enter '1' to look at the truck. \n"
 					+ "Enter '2' to look at the generator in front of the truck. \n"
@@ -100,6 +100,7 @@ public class rustic_truck
 			}
 			else
 			{
+				Spaceadder(2);
 				System.out.println("Please enter a singular valid interger from '1' to '7'. \n");
 			}
 			
@@ -156,26 +157,32 @@ public class rustic_truck
 			space--;
 		}
 	}
-	public static boolean LocErrHandler(Scanner input)
-	{
+	public static boolean LocErrHandler(Scanner input) // UPDATED VERSION -> Don't forget to copy...
+	{ // Handlers string based inputs from the user
 		String outcome;
 		try
 		{
 			outcome = input.nextLine();
+			//System.out.println(outcome);
 			
-			if (outcome.toLowerCase().equals("continue"))
+			// New shortcut added with the c instead of having to constantly write c
+			// Now everyone can stop complaining that it takes too long to type continue...
+			// Боже мой...
+			if ((outcome.toLowerCase().equals("continue")) || (outcome.toLowerCase().equals("c")))
 			{
 				return true;
 			}
+			
 			else
 			{
 				System.out.println("You've provided an incorrect string");
 				System.out.println("Please enter...");
-				System.out.println("'Continue' following actions");
+				System.out.println("'Continue' or 'C' for following actions...");
 			}
 		}
-		catch (Exception e)
+		catch (Exception E)
 		{
+			// Yes I am too easy to change these lines of text...
 			System.out.println("Please enter a valid response in letters...");
 			System.out.println("'Enter' OR 'Exit' for their following actions");
 		}
@@ -193,11 +200,11 @@ public class rustic_truck
 				+ "almost like as though it had been abandoned. \n"
 				+ "You walk around it in an attempt to look inside, \n"
 				+ "Theres nothing much but a couple of boxes, \n"
-				+ "filled with various things like rope, blankets, \n"
-				+ "first aid kit, a flash light and a book. \n"
+				+ "filled with various things like ropes, blankets, \n"
+				+ "a first aid kit, a flashlight and a book. \n"
 				+ "On the cover, it said 'Generator manual'. \n");
 		
-		System.out.println("Type in 'Continue' \n");
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		while (checker == false)
 		{
 			checker = LocErrHandler(input);
@@ -216,12 +223,13 @@ public class rustic_truck
 			{
 				if (inv.getcarkey() == true)
 				{
-					System.out.println("You use the car keys you've found in the Kabin. \n"
+					Spaceadder(2);
+					System.out.println("You use the car keys you've found in the 'Kabin'. \n"
 							+ "Thankfully it clicks and lets you in. \n"
 							+ "Once settled in the car, you take a good deep long breath. \n"
-							+ "You could feel hope bubbling in you in the opportunity to leave here. \n");
+							+ "You could feel hope bubbling in you with the possibility of escape palpable. \n");
 					
-					System.out.println("Type in 'Continue' \n");
+					System.out.println("Type in 'Continue' or 'C'. \n");
 					while (dobchecker == false)
 					{
 						dobchecker = LocErrHandler(input);
@@ -230,6 +238,7 @@ public class rustic_truck
 					
 					while (dobchecker == false)
 					{
+						Spaceadder(2);
 						System.out.println("What do you choose to do? \n"
 								+ "Enter '1' to start the car \n"
 								+ "Enter '2' to read the generator's manual. \n"
@@ -239,15 +248,16 @@ public class rustic_truck
 						{
 							if (inv.getcarfuel() == true)
 							{
+								Spaceadder(2);
 								System.out.println("Before you start the car again, you remember the fuel you have. \n"
-										+ "You waste no extra seconds and add the fuel within the truck. \n"
-										+ "It gulps it up, finally satiated its first. \n"
-										+ "One done, you make it back in and attempt to start the car. \n"
-										+ "It turns on. \n"
-										+ "You drive through the path... \n");
+										+ "You waste no extra time and add the fuel within the truck. \n"
+										+ "It gulps it up, finally satiating its thirst. \n"
+										+ "Once done, you make it back in and attempt to start the truck. \n"
+										+ "It kickstarts, the engine roaring as it vibrates. \n"
+										+ "You begin to move, driving through the path... \n");
 								boolean fincheck = false;
 								
-								System.out.println("Type in 'Continue' \n");
+								System.out.println("Type in 'Continue' or 'C'. \n");
 								while (fincheck == false)
 								{
 									fincheck = LocErrHandler(input);
@@ -259,11 +269,11 @@ public class rustic_truck
 							}
 							else if (inv.getcarfuel() == false)
 							{
-								System.out.println("You turn the key on the car. \n"
+								System.out.println("You turn the key on the truck. \n"
 										+ "But the engine doesn't start, \n"
-										+ "you then notice that the car is missing fuel. \n"
+										+ "you then notice that the truck is missing fuel. \n"
 										+ "With its tank empy, \n"
-										+ "You'll have to find another source of fuel. \n");
+										+ "you'll have to find another source of fuel. \n");
 							}
 						}
 						else if (result == 2)
@@ -272,7 +282,7 @@ public class rustic_truck
 									+ "It was covered in a layer of dust which you blew away. \n"
 									+ "You open its contents. \n");
 							
-							System.out.println("Type in 'Continue' \n");
+							System.out.println("Type in 'Continue' or 'C'. \n");
 							boolean trichecker = false;
 							while (trichecker == false)
 							{
@@ -287,39 +297,40 @@ public class rustic_truck
 									+ "\n"
 									+ "These generators use to power a number of objects within the vicinity. \n"
 									+ "\n"
-									+ "Although the majority of objects that were have been scrapped. \n"
+									+ "Although the majority of said objects have been scrapped by the government. \n"
 									+ "\n"
 									+ "These generators are also in relatively bad shape, having different excitor rates. \n"
 									+ "\n"
-									+ "As an external mechanice I don't know how these were operated but I've pinpointed some things. \n"
+									+ "As an external mechanic, I don't know how these were operated but I've pinpointed some things. \n"
 									+ "\n"
 									+ "The only thing operable for the generators is the garage door used to store supplies. \n"
 									+ "\n"
-									+ "It requires a nominal amount of 100 Volts to operate, although only specifically this amount. \n"
+									+ "It requires around 100 Volts to operate, although only specifically this amount. \n"
 									+ "\n"
 									+ "Otherwise the garage door won't operate under any other condition. \n"
 									+ "\n"
-									+ "We have the following three generators, Generator A, B. C. \n"
+									+ "We have the following three generators, Generator A, B, and C. \n"
 									+ "\n"
 									+ "The excitor is the amplifyer used to generate volts within the generator. \n"
 									+ "\n"
-									+ "Generator A exciter is tuned at 5. \n"
+									+ "Generator A excitor is tuned at 5. \n"
 									+ "Turn the knob to increase the Volt via the iteration of the excitor \n"
 									+ "\n"
-									+ "Generator B exciter is tuned at 9. \n"
+									+ "Generator B excitor is tuned at 9. \n"
 									+ "Turn the knob to increase the Volt via the iteration of the excitor \n"
 									+ "\n"
 									+ "Generator C excitor is tuned at 2. \n"
 									+ "Turn the knob to increase the Volt via the iteration of the excitor \n"
 									+ "\n"
 									+ "Anyhow I've set the generator to a default, \n"
-									+ "its only one possible combination on how the generator's work. \n"
-									+ "Equalling to about 100 Volts, I've linked that combination to a set of green indicators. \n"
+									+ "since I've found a combination that works without the hassle of finding one yourself. \n"
+									+ "It equals to about 100 Volts, I've linked that specifc combination to a set of green indicators. \n"
 									+ "They're below the knife switch for you to double check. \n"
-									+ "Or if you're fancy you can use your own combination. \n");
+									+ "Or if you're fancy you can use your own combination and ignore the lights. \n"
+									+ "They still will light up in an event where you reach 100 Volts, so don't forget. \n");
 							
 							
-							System.out.println("Type in 'Continue'");
+							System.out.println("Type in 'Continue' or 'C'. \n");
 							while (trichecker == false)
 							{
 								trichecker = LocErrHandler(input);
@@ -342,9 +353,9 @@ public class rustic_truck
 				else if (inv.getcarkey() == false)
 				{
 					Spaceadder(2);
-					System.out.println("You try and open the car door, \n"
+					System.out.println("You try and open the truck door, \n"
 							+ "but it doesn't budge. \n"
-							+ "Looks like you'll need o get some car keys for it. \n");
+							+ "Looks like you'll find a pair of keys to open it. \n");
 				}
 			}
 			else if (result == 2)
@@ -364,12 +375,12 @@ public class rustic_truck
 		Spaceadder(2);
 		System.out.println("You approach the generator in front of the car. \n"
 				+ "It looked fairly ancient and run down, \n"
-				+ "the labelling of it clearly ripped off. \n"
+				+ "with the labelling of it clearly ripped off. \n"
 				+ "You do spot a control panel among it, \n"
-				+ "although the panel sadly is cracked not showcasing anything. \n"
-				+ "The only thing noteworthy is a knob you could turn, it was currently left at '"+ gen_knob_C + "'. \n");
+				+ "although the panel sadly is cracked, not showcasing anything. \n"
+				+ "The only other noteworthy thing is a knob you could turn, it was currently left at '"+ gen_knob_C + "'. \n");
 		
-		System.out.println("Type in 'Continue' \n");
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		while (checker == false)
 		{
 			checker = LocErrHandler(input);
@@ -391,7 +402,7 @@ public class rustic_truck
 				{
 					Spaceadder(2);
 					System.out.println("The current knob is at " + gen_knob_C + ". \n"
-							+ "What number do you turn the knob too? \n"
+							+ "What number do you turn the knob to? \n"
 							+ "Enter a value ranging from '0' to '9'. \n");
 					
 					gen_knob_C = knob_dialler(input);
@@ -433,9 +444,9 @@ public class rustic_truck
 			Spaceadder(2);
 			System.out.println("When approaching the garage you notice the scale of it was smaller than expected. \n"
 					+ "You found tons of different equipment here and there and posters, \n"
-					+ "You find some an easel at the center of it. \n");
+					+ "You even find a easel at the center of it showcasing an art piece. \n");
 					
-			System.out.println("Type in 'Continue' \n");
+			System.out.println("Type in 'Continue' or 'C'. \n");
 			while (checker == false)
 			{
 				checker = LocErrHandler(input);
@@ -445,16 +456,17 @@ public class rustic_truck
 			Spaceadder(2);
 			System.out.println("You approach it, taking a deep good look at it. \n"
 					+ "It wasn't something of the faint hearted. \n"
-					+ "The top half of the art was the forest you recognise outside of here. \n"
+					+ "The top half of the art was the forest you recognised outside of here. \n"
 					+ "Likely off the local environment. \n"
-					+ "It was drawn beautifully showcasing the wild life and lush trees and coming to a loch. \n"
-					+ "Although the lake that made the lower half of the image should've mirrored the forest. \n"
+					+ "It was drawn beautifully showcasing the wild life and lush trees that surrounded a loch. \n"
+					+ "Although the said loch that made the lower half of the image should've mirrored the forest. \n"
 					+ "Instead... \n"
 					+ "Displayed dark blotches of red, with arms trying to reach out of the loch. \n"
-					+ "It was dark with shadow figures whailing, whatever it was made your heart sink. \n"
+					+ "Shadowy figures whailed from its depths, trapped with the view of the forest from above.\n"
+					+ "Whatever it was, it made your heart sink. \n"
 					+ "You looked away with no hesitation. \n");
 			
-			System.out.println("Type in 'Continue' \n");
+			System.out.println("Type in 'Continue' or 'C'. \n");
 			while (checker == false)
 			{
 				checker = LocErrHandler(input);
@@ -462,13 +474,13 @@ public class rustic_truck
 			checker = false;
 					
 			Spaceadder(2);
-			System.out.println("The only other notable thing was the fuel canister. \n"
+			System.out.println("The remaining notable thing was a fuel canister. \n"
 					+ "Upon picking it up you noticed it was full. \n"
 					+ "You take it with you. \n");	
 			
 			inv.setcarfuel(true);
 			
-			System.out.println("Type in 'Continue' \n");
+			System.out.println("Type in 'Continue' or 'C'. \n");
 			while (checker == false)
 			{
 				checker = LocErrHandler(input);
@@ -488,10 +500,10 @@ public class rustic_truck
 		Spaceadder(2);
 		System.out.println("You approach the generator beside the hidden garage. \n"
 				+ "It looked fairly ancient and run down, \n"
-				+ "the labelling of it clearly ripped off. \n"
+				+ "with the labelling of it clearly ripped off. \n"
 				+ "You do spot a control panel among it, \n"
 				+ "although the panel sadly is cracked not showcasing anything. \n"
-				+ "The only thing noteworthy is a knob you could turn, it was currently left at '"+ gen_knob_A + "'. \n");
+				+ "The only other noteworthy thing is a knob you could turn, it was currently left at '"+ gen_knob_A + "'. \n");
 		
 		System.out.println("Type in 'Continue' \n");
 		while (checker == false)
@@ -515,7 +527,7 @@ public class rustic_truck
 				{
 					Spaceadder(2);
 					System.out.println("The current knob is at " + gen_knob_A + ". \n"
-							+ "What number do you turn the knob too? \n"
+							+ "What number do you turn the knob to? \n"
 							+ "Enter a value ranging from '0' to '9'. \n");
 					
 					gen_knob_A = knob_dialler(input);
@@ -570,13 +582,13 @@ public class rustic_truck
 		Scanner input = new Scanner(System.in);
 		Spaceadder(2);
 		System.out.println("You approach the podium. \n"
-				+ "Now you are able to get a better look at it. \n"
-				+ "There appeared to be a massive switch, \n"
-				+ "below it, there seemed to be three green lights that were off. \n"
-				+ "There wasn't much really around it, "
-				+ "beside the massive knife switch in front of you. \n");
+				+ "You get a better closer look at it. \n"
+				+ "On it was a massive knife switch, \n"
+				+ "meanwhile below was three green indicators that were off. \n"
+				+ "There wasn't really much else, "
+				+ "it looked like the only thing you could interact with was the said switch. \n");
 		
-		System.out.println("Type in 'Coninue' \n");
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		while (checker == false)
 		{
 			checker = LocErrHandler(input);
@@ -603,8 +615,8 @@ public class rustic_truck
 					Spaceadder(2);
 					System.out.println("You hear the nearby garage make an odd sound. \n"
 							+ "As you look you notice it begin to drag itself up. \n"
-							+ "You smile with the confidence that you were able to make it open \n"
-							+ "Plus you notice all of the green lights turned on. \n");
+							+ "You smile with the confidence that you were able to make it open. \n"
+							+ "Plus you notice all of the green lights had turned on too. \n");
 					gen_switch = 1;
 				}
 				else
@@ -662,12 +674,12 @@ public class rustic_truck
 		Spaceadder(2);
 		System.out.println("You approach the generator across the path from the car. \n"
 				+ "It looked fairly ancient and run down, \n"
-				+ "the labelling of it clearly ripped off. \n"
+				+ "with the labelling of it clearly ripped off. \n"
 				+ "You do spot a control panel among it, \n"
-				+ "the panel was in relatively good condition with no issues. \n"
-				+ "The only thing noteworthy is a knob you could turn, it was currently left at '"+ gen_knob_B + "'. \n");
+				+ "the panel was in relatively good condition. \n"
+				+ "The only other noteworthy thing is a knob you could turn, it was currently left at '"+ gen_knob_B + "'. \n");
 		
-		System.out.println("Type in 'Continue' \n");
+		System.out.println("Type in 'Continue' or 'C'. \n");
 		while (checker == false)
 		{
 			checker = LocErrHandler(input);
@@ -689,7 +701,7 @@ public class rustic_truck
 				{
 					Spaceadder(2);
 					System.out.println("The current knob is at " + gen_knob_B + ". \n"
-							+ "What number do you turn the knob too? \n"
+							+ "What number do you turn the knob to? \n"
 							+ "Enter a value ranging from '0' to '9'. \n");
 					
 					gen_knob_B = knob_dialler(input);

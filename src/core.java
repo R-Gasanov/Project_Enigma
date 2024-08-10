@@ -6,7 +6,7 @@ public class core
 	public void StartGame()
 	{
 		Spaceadder(10);
-		System.out.println("-------------Version 0.0.0.1--------------");
+		System.out.println("-------------Version 0.0.3.0--------------");
 		System.out.println("------------------------------------------");
 		System.out.println("------Enigma Games presents... KABIN------");
 		System.out.println("------------------------------------------");
@@ -79,7 +79,7 @@ public class core
 					+ "Enter '3' for the Southern Path.\n"
 					+ "Enter '4' to look at your Inventory \n"
 					// Potentially implementing an inventory throughout the locations
-					// May come around in a 3.0 update.
+					// May come around in a 3.0+ update.
 					);
 			
 			int intchecker = 5;

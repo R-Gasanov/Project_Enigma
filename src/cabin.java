@@ -5,7 +5,7 @@ public class cabin
 	public void cabin()
 	{
 		Spaceadder(10);
-		System.out.println("-------------Version 0.0.0.1--------------");
+		System.out.println("-------------Version 0.0.3.0--------------");
 		System.out.println("------------------------------------------");
 		System.out.println("------Enigma Games presents... KABIN------");
 		System.out.println("------------------------------------------");
@@ -144,29 +144,32 @@ public class cabin
 			space--;
 		}
 	}
-	public static boolean LocErrHandler(Scanner input)
-	{
+	public static boolean LocErrHandler(Scanner input) // UPDATED VERSION -> Don't forget to copy...
+	{ // Handlers string based inputs from the user
 		String outcome;
-		
-		
 		try
 		{
 			outcome = input.nextLine();
-			if (outcome.toLowerCase().equals("continue"))
+			//System.out.println(outcome);
+			
+			// New shortcut added with the c instead of having to constantly write c
+			// Now everyone can stop complaining that it takes too long to type continue...
+			// Боже мой...
+			if ((outcome.toLowerCase().equals("continue")) || (outcome.toLowerCase().equals("c")))
 			{
 				return true;
 			}
+			
 			else
 			{
-				Spaceadder(2);
 				System.out.println("You've provided an incorrect string");
 				System.out.println("Please enter...");
-				System.out.println("'Continue' following actions");
+				System.out.println("'Continue' or 'C' for following actions...");
 			}
-
 		}
 		catch (Exception E)
 		{
+			// Yes I am too easy to change these lines of text...
 			System.out.println("Please enter a valid response in letters...");
 			System.out.println("'Enter' OR 'Exit' for their following actions");
 		}
